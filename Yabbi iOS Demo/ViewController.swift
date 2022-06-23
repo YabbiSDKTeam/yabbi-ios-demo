@@ -44,12 +44,12 @@ class ViewController: UIViewController, YabbiInterstitialDelegate, YabbiRewarded
     @IBAction func initializeSDK(_ sender: Any) {
         let pubID = pubIDField.text ?? ""
         let bannerID = interstitialUnitIDField.text ?? ""
-        let videoID = rewardedUnitIDField.text ?? ""
+        let rewardedID = rewardedUnitIDField.text ?? ""
         
         let configuration = YabbiConfiguration(
             publisherID: pubID,
             interstitialID: bannerID,
-            rewardedID: videoID
+            rewardedID: rewardedID
         )
         
         YabbiAds.initialize(configuration)
@@ -57,7 +57,7 @@ class ViewController: UIViewController, YabbiInterstitialDelegate, YabbiRewarded
         YabbiAds.setRewardedDelegate(self)
        
         locationManager?.requestWhenInUseAuthorization()
-        writeNewLog(messgae: "PubID: \(pubID)\nBannerID: \(bannerID)\nVideoID: \(videoID)", new: true)
+        writeNewLog(messgae: "PubID: \(pubID)\nBannerID: \(bannerID)\nVideoID: \(rewardedID)", new: true)
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
