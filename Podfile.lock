@@ -1,0 +1,25 @@
+PODS:
+  - SwiftLocation/Core (5.1.0)
+  - WKJavaScriptController (2.0.1)
+  - YabbiAds (1.1.0):
+    - SwiftLocation/Core
+    - WKJavaScriptController
+
+DEPENDENCIES:
+  - YabbiAds
+
+SPEC REPOS:
+  https://github.com/YabbiSDKTeam/CocoaPods:
+    - YabbiAds
+  trunk:
+    - SwiftLocation
+    - WKJavaScriptController
+
+SPEC CHECKSUMS:
+  SwiftLocation: 83e0ea75a1969cee3a1197e2b7095603fc23fde5
+  WKJavaScriptController: 25cfe98fa9617dc38e1f951a3a3f6adf6c77875e
+  YabbiAds: f6cbee9ff61bf24f1b0c94d6efa9b27caf1010b7
+
+PODFILE CHECKSUM: 185c13fee3c4e1ab9f2051a8c62054837481400a
+
+COCOAPODS: 1.11.3
