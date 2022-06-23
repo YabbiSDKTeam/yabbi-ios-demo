@@ -1,4 +1,4 @@
-# YabbiAds Android SDK
+# YabbiAds iOS SDK
 
 ## Руководство по Интеграции
 
@@ -114,7 +114,59 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 2. Замените YOUR_INTERSTITIAL_ID на ключ соответствующий баннерной рекламе из [личного кабинета](https://mobileadx.ru).
 3. Замените YOUR_REWARDED_ID на ключ соответствующий видео с вознаграждением из [личного кабинета](https://mobileadx.ru).
 
-## Шаг 4. Конфигурация типов рекламы
+
+## Шаг 4. Запрос геолокации пользователя
+Для эффективного таргетирования рекламы SDK собирает данные геолокации.  
+Для доступа к геолокации требуется разрешение пользователя. Добавьте следующий ключ в свой файл **Info.plist** проекта. 
+```plist
+<key>NSLocationWhenInUseUsageDescription</key>
+<string>We need this permission for better ad targetting</string>
+
+```
+Для запроса разрешения следуйте инструкциям ниже
+
+1. Добавьте переменную типа **CLLocationManager** в свой **UIViewController**
+```swift
+var locationManager: CLLocationManager?
+```
+2. Добавьте делигат **CLLocationManagerDelegate** к своему **UIViewController**
+```swift
+class YourViewController: UIViewController, CLLocationManagerDelegate {
+```
+3. Добавьте следующий код во **viewDidLoad**
+```swift
+override func viewDidLoad() {
+    super.viewDidLoad()
+
+    locationManager = CLLocationManager()
+    locationManager?.delegate = self
+    locationManager?.requestAlwaysAuthorization()
+}
+```
+4. Для прослушивания изменения статуса используйте следующий код
+```swift
+func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+    if status == .authorizedAlways {
+      // Ваш код
+    }
+}
+```
+
+
+Для обработки результата добавьте слудющий код в **Activity**
+```java
+@Override
+public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+    super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+    
+    // ваш код
+}
+```
+
+Вы можете ознакомиться подробнее о геолокации и разрешениях на [5 шаге](Шаг-5.-Подготовьте-ваше-приложение-к-публикации).
+
+
+## Шаг 5. Конфигурация типов рекламы
 YabbiAds SDK готов к использованию.  
 YabbiAds предоставляет на выбор 2 типа рекламы.
 Вы можете ознакомиться с установкой каждого типа в соответствующей документации:
@@ -122,7 +174,7 @@ YabbiAds предоставляет на выбор 2 типа рекламы.
 1. [Полноэкранный баннер](INTERSTITIAL_DOC.MD)
 2. [Полноэкранный видео баннер с вознаграждением](REWARDED_VIDEO_DOC.MD)
 
-## Шаг 5. Публикация вашего приложения
+## Шаг 6. Публикация вашего приложения
 
 При загрузке вашего приложения в App Store, вам требуется обновить настройки рекламного идентификатора (Advertising Identifier IDFA), чтобы соответствовать рекламной политике Apple.
 
