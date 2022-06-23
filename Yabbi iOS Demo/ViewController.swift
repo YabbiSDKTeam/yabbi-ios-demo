@@ -10,29 +10,33 @@ import YabbiAds
 import CoreLocation
 
 
-class ViewController: UIViewController, YabbiInterstitialDelegate, YabbiRewardedVideoDelegate  {
+class ViewController: UIViewController, YabbiInterstitialDelegate, YabbiRewardedVideoDelegate, CLLocationManagerDelegate  {
     
     @IBOutlet weak var pubIDField: UITextField!
     @IBOutlet weak var interstitialUnitIDField: UITextField!
     @IBOutlet weak var rewardedUnitIDField: UITextField!
     @IBOutlet weak var LogField: UITextView!
     
-    let pubID = "d93d006b-7ed0-481e-bf88-76b5d90952e2"
-    let interstitialUnitID = "1fa38071-abbf-40af-81ec-b106880dc789"
-    let rewardedUnitID = "551cb4fd-d20c-4edc-a1e7-8784b4470cbe"
+    let DEFAULT_PUBLISHER_ID = "YOUR_PUBLISHER_KEY"
+    let DEFAULT_INTERSTITIAL_ID = "YOUR_INTERSTITIAL_ID"
+    let DEFAULT_REWARDED_ID = "YOUR_REWARDED_ID"
+    
+    var locationManager: CLLocationManager?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configureTextFields()
         
-        pubIDField.text = pubID
-        interstitialUnitIDField.text = interstitialUnitID
-        rewardedUnitIDField.text = rewardedUnitID
+        pubIDField.text = DEFAULT_PUBLISHER_ID
+        interstitialUnitIDField.text = DEFAULT_INTERSTITIAL_ID
+        rewardedUnitIDField.text = DEFAULT_REWARDED_ID
         
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
+        locationManager = CLLocationManager()
+        locationManager?.delegate = self
         
         initializeSDK(self)
     }
@@ -51,7 +55,13 @@ class ViewController: UIViewController, YabbiInterstitialDelegate, YabbiRewarded
         YabbiAds.initialize(configuration)
         YabbiAds.setInterstitialDelegate(self)
         YabbiAds.setRewardedDelegate(self)
+       
+        locationManager?.requestWhenInUseAuthorization()
         writeNewLog(messgae: "PubID: \(pubID)\nBannerID: \(bannerID)\nVideoID: \(videoID)", new: true)
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+       // You can handle status here
     }
     
     @IBAction func IntersititialButtonTapped(_ sender: Any) {
