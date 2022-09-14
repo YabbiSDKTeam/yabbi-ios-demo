@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		740643B528D247720048BAD0 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740643B428D247720048BAD0 /* AppConfig.swift */; };
+		740643B928D24C540048BAD0 /* Env.plist in Resources */ = {isa = PBXBuildFile; fileRef = 740643B828D24C540048BAD0 /* Env.plist */; };
 		7476692428639D750003B985 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7476692328639D750003B985 /* AppDelegate.swift */; };
 		7476692828639D750003B985 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7476692728639D750003B985 /* ViewController.swift */; };
 		7476692B28639D750003B985 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7476692928639D750003B985 /* Main.storyboard */; };
@@ -17,6 +19,8 @@
 
 /* Begin PBXFileReference section */
 		576C010DDBC69D8654C634F5 /* Pods_Yabbi_iOS_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yabbi_iOS_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		740643B428D247720048BAD0 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		740643B828D24C540048BAD0 /* Env.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Env.plist; sourceTree = "<group>"; };
 		7476692028639D750003B985 /* Yabbi iOS Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yabbi iOS Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7476692328639D750003B985 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7476692728639D750003B985 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,7 +71,9 @@
 				7476692928639D750003B985 /* Main.storyboard */,
 				7476692C28639D750003B985 /* Assets.xcassets */,
 				7476692E28639D750003B985 /* LaunchScreen.storyboard */,
+				740643B828D24C540048BAD0 /* Env.plist */,
 				7476693128639D750003B985 /* Info.plist */,
+				740643B428D247720048BAD0 /* AppConfig.swift */,
 			);
 			path = "Yabbi iOS Demo";
 			sourceTree = "<group>";
@@ -150,6 +156,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				740643B928D24C540048BAD0 /* Env.plist in Resources */,
 				7476693028639D750003B985 /* LaunchScreen.storyboard in Resources */,
 				7476692D28639D750003B985 /* Assets.xcassets in Resources */,
 				7476692B28639D750003B985 /* Main.storyboard in Resources */,
@@ -205,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				740643B528D247720048BAD0 /* AppConfig.swift in Sources */,
 				7476692828639D750003B985 /* ViewController.swift in Sources */,
 				7476692428639D750003B985 /* AppDelegate.swift in Sources */,
 			);
@@ -353,9 +361,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 20;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 22;
+				DEVELOPMENT_TEAM = CAA9292QHH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Yabbi iOS Demo/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "iOS Demo";
@@ -389,9 +397,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 20;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 22;
+				DEVELOPMENT_TEAM = CAA9292QHH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Yabbi iOS Demo/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "iOS Demo";
