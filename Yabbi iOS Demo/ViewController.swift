@@ -17,9 +17,9 @@ class ViewController: UIViewController, YabbiInterstitialDelegate, YabbiRewarded
     @IBOutlet weak var rewardedUnitIDField: UITextField!
     @IBOutlet weak var LogField: UITextView!
     
-    let DEFAULT_PUBLISHER_ID = "YOUR_PUBLISHER_KEY"
-    let DEFAULT_INTERSTITIAL_ID = "YOUR_INTERSTITIAL_ID"
-    let DEFAULT_REWARDED_ID = "YOUR_REWARDED_ID"
+    let YABBI_PUBLISHER_ID = ProcessInfo.processInfo.environment["YABBI_PUBLISHER_ID"]
+    let YABBI_INTERSTITIAL_ID = ProcessInfo.processInfo.environment["YABBI_INTERSTITIAL_ID"]
+    let YABBI_REWARDED_ID = ProcessInfo.processInfo.environment["YABBI_REWARDED_ID"]
     
     var locationManager: CLLocationManager?
     
@@ -28,9 +28,9 @@ class ViewController: UIViewController, YabbiInterstitialDelegate, YabbiRewarded
         
         configureTextFields()
         
-        pubIDField.text = DEFAULT_PUBLISHER_ID
-        interstitialUnitIDField.text = DEFAULT_INTERSTITIAL_ID
-        rewardedUnitIDField.text = DEFAULT_REWARDED_ID
+        pubIDField.text = YABBI_PUBLISHER_ID
+        interstitialUnitIDField.text = YABBI_INTERSTITIAL_ID
+        rewardedUnitIDField.text = YABBI_REWARDED_ID
         
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))

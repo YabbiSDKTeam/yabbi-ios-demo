@@ -1,7 +1,7 @@
 PODS:
   - SwiftLocation/Core (5.1.0)
   - WKJavaScriptController (2.0.1)
-  - YabbiAds (1.2.0):
+  - YabbiAds (1.2.1):
     - SwiftLocation/Core
     - WKJavaScriptController
 
@@ -18,7 +18,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   SwiftLocation: 83e0ea75a1969cee3a1197e2b7095603fc23fde5
   WKJavaScriptController: 25cfe98fa9617dc38e1f951a3a3f6adf6c77875e
-  YabbiAds: 08ad08d9527528e594dd3556ab98e2ec7eb0882b
+  YabbiAds: 09b9124b0b20a9125f7d1ae6325336bef8936358
 
 PODFILE CHECKSUM: 185c13fee3c4e1ab9f2051a8c62054837481400a
 
