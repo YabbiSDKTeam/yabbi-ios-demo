@@ -10,7 +10,7 @@ import YabbiAds
 import CoreLocation
 
 
-class ViewController: UIViewController, YabbiInterstitialDelegate, YabbiRewardedVideoDelegate, CLLocationManagerDelegate  {
+class ViewController: UIViewController, YbiInterstitialDelegate, YbiRewardedDelegate, CLLocationManagerDelegate  {
     
     @IBOutlet weak var pubIDField: UITextField!
     @IBOutlet weak var interstitialUnitIDField: UITextField!
@@ -47,6 +47,23 @@ class ViewController: UIViewController, YabbiInterstitialDelegate, YabbiRewarded
             interstitialID: bannerID,
             rewardedID: rewardedID
         )
+        
+        YabbiAds.setCustomParams(YBIAdaptersParameters.yandexInterstitialID, AppConfig.YANDEX_INTERSTITIAL_ID)
+        YabbiAds.setCustomParams(YBIAdaptersParameters.yandexInterstitialID, AppConfig.YANDEX_REWARDED_ID)
+        
+        
+        
+        YabbiAds.setCustomParams(YBIAdaptersParameters.mintegralAppID, AppConfig.MINTEGRAL_APP_ID)
+        
+        YabbiAds.setCustomParams(YBIAdaptersParameters.mintegralApiKey, AppConfig.MINTEGRAL_API_KEY)
+        
+        YabbiAds.setCustomParams(YBIAdaptersParameters.mintegralInterstitialPlacementId, AppConfig.MINTEGRAL_INTERSTITIAL_PLACEMENT_ID)
+        
+        YabbiAds.setCustomParams(YBIAdaptersParameters.mintegralInterstitialUnitId, AppConfig.MINTEGRAL_INTERSTITIAL_UNIT_ID)
+        
+        YabbiAds.setCustomParams(YBIAdaptersParameters.mintegralRewardedPlacementId, AppConfig.MINTEGRAL_REWARDED_PLACEMENT_ID)
+        
+        YabbiAds.setCustomParams(YBIAdaptersParameters.mintegralRewardedUnitId, AppConfig.MINTEGRAL_REWARDED_UNIT_ID)
         
         YabbiAds.initialize(configuration)
         YabbiAds.setInterstitialDelegate(self)
@@ -100,7 +117,7 @@ class ViewController: UIViewController, YabbiInterstitialDelegate, YabbiRewarded
     
     func onInterstitialLoaded() {
         writeNewLog(messgae: "onInterstitialLoaded", new: false)
-        YabbiAds.showAd(AdType.INTERSTITIAL, rootViewController: self)
+        YabbiAds.showAd(AdType.INTERSTITIAL, self)
     }
     
     func onInterstitialLoadFailed(_ error: String) {
@@ -119,28 +136,28 @@ class ViewController: UIViewController, YabbiInterstitialDelegate, YabbiRewarded
         writeNewLog(messgae: "onInterstitialClosed", new: false)
     }
     
-    func onRewardedVideolLoaded() {
-        YabbiAds.showAd(AdType.REWARDED, rootViewController: self)
+    func onRewardedLoaded() {
+        YabbiAds.showAd(AdType.REWARDED, self)
         writeNewLog(messgae: "onRewardedVideolLoaded", new: false)
     }
     
-    func oRewardedVideoLoadFailed(_ error: String) {
+    func oRewardedLoadFailed(_ error: String) {
         writeNewLog(messgae: "oRewardedVideoLoadFailed: \(error)", new: false)
     }
     
-    func onRewardedVideoShown() {
+    func onRewardedShown() {
         writeNewLog(messgae: "onRewardedVideoShown", new: false)
     }
     
-    func onRewardedVideoShowFailed(_ error: String) {
+    func onRewardedShowFailed(_ error: String) {
         writeNewLog(messgae: "onRewardedVideoShowFailed: \(error)", new: false)
     }
     
-    func onRewardedVideoClosed() {
+    func onRewardedClosed() {
         writeNewLog(messgae: "onRewardedVideoClosed", new: false)
     }
     
-    func onRewardedVideoFinished() {
+    func onRewardedFinished() {
         writeNewLog(messgae: "onRewardedVideoFinished", new: false)
     }
     

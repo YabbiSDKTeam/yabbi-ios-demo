@@ -17,7 +17,7 @@ YabbiAds.setInterstitialDelegate(self)
 Теперь вы можете использовать следующие методы обратного вызова:
 
 ```swift
-extension YourViewController: YabbiInterstitialDelegate {
+extension YourViewController: YbiInterstitialDelegate {
     
     func onInterstitialLoaded() {
         // Вызывется при загрузке рекламы
@@ -50,14 +50,14 @@ YabbiAds.isAdLoaded(AdType.INTERSTITIAL)
 Рекомендуем всегда проверять статус загрузки рекламы, прежде чем пытаться ее показать.
 ```swift
 if(YabbiAds.isAdLoaded(AdType.INTERSTITIAL)) {
-    YabbiAds.showAd(AdType.INTERSTITIAL)
+    YabbiAds.showAd(AdType.INTERSTITIAL, self)
 }
 ```
 
 ## Показ рекламы
 Для показа рекламы используйте метод:
 ```swift
-YabbiAds.showAd(AdType.INTERSTITIAL)
+YabbiAds.showAd(AdType.INTERSTITIAL, self)
 ```
 
 ## Уничтожение рекламного контейнера

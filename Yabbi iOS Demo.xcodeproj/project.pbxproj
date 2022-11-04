@@ -108,6 +108,7 @@
 				7476691D28639D750003B985 /* Frameworks */,
 				7476691E28639D750003B985 /* Resources */,
 				40FF668DFFDE0798FC43E2AD /* [CP] Embed Pods Frameworks */,
+				397B4D94548651565019AC0B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -166,6 +167,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		397B4D94548651565019AC0B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Yabbi iOS Demo/Pods-Yabbi iOS Demo-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Yabbi iOS Demo/Pods-Yabbi iOS Demo-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Yabbi iOS Demo/Pods-Yabbi iOS Demo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		40FF668DFFDE0798FC43E2AD /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
