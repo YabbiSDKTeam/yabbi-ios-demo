@@ -18,29 +18,29 @@ YabbiAds.setRewardedDelegate(self)
 Теперь вы можете использовать следующие методы обратного вызова:
 
 ```swift
-extension YourViewController: YabbiRewardedVideoDelegate {
+extension YourViewController: YbiRewardedDelegate {
     
-    func onRewardedVideolLoaded() {
+    func onRewardedLoaded() {
         // Вызывется при загрузке рекламы
     }
 
-    func oRewardedVideoLoadFailed(_ error: String) {
+    func oRewardedLoadFailed(_ error: String) {
         // Вызывется если при загрузке рекламы произошла ошибка
     }
 
-    func onRewardedVideoShown() {
+    func onRewardedShown() {
         //  Вызывается при показе рекламы
     }
 
-    func onRewardedVideoShowFailed(_ error: String) {
+    func onRewardedShowFailed(_ error: String) {
          // Вызывется если при показе рекламы произошла ошибка
     }
 
-    func onRewardedVideoClosed(_ error: String) {
+    func onRewardedClosed(_ error: String) {
         // Вызывается при закрытии рекламы
     }
 
-    func onRewardedVideoFinished() {
+    func onRewardedFinished() {
         // Вызывется когда реклама закончилась
     }
 }
@@ -55,14 +55,14 @@ YabbiAds.isAdLoaded(AdType.REWARDED)
 Рекомендуем всегда проверять статус загрузки рекламы, прежде чем пытаться ее показать.
 ```swift
 if(YabbiAds.isAdLoaded(AdType.REWARDED)) {
-    YabbiAds.showAd(AdType.REWARDED)
+    YabbiAds.showAd(AdType.REWARDED, self)
 }
 ```
 
 ## Показ рекламы
 Для показа рекламы используйте метод:
 ```swift
-YabbiAds.showAd(AdType.REWARDED)
+YabbiAds.showAd(AdType.REWARDED, self)
 ```
 
 ## Уничтожение рекламного контейнера

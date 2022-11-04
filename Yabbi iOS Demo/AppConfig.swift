@@ -53,4 +53,40 @@ class AppConfig {
             plist.object(forKey: "YANDEX_REWARDED_ID") as? String ?? ""
         }
     }
+    
+    static var MINTEGRAL_APP_ID:String {
+        get {
+            plist.object(forKey: "MINTEGRAL_APP_ID") as? String ?? ""
+        }
+    }
+    
+    static var MINTEGRAL_API_KEY:String {
+        get {
+            plist.object(forKey: "MINTEGRAL_API_KEY") as? String ?? ""
+        }
+    }
+    
+    static var MINTEGRAL_INTERSTITIAL_PLACEMENT_ID:String {
+        get {
+            plist.object(forKey: "MINTEGRAL_INTERSTITIAL_PLACEMENT_ID") as? String ?? ""
+        }
+    }
+    
+    static var MINTEGRAL_INTERSTITIAL_UNIT_ID:String {
+        get {
+            plist.object(forKey: "MINTEGRAL_INTERSTITIAL_UNIT_ID") as? String ?? ""
+        }
+    }
+    
+    static var MINTEGRAL_REWARDED_PLACEMENT_ID:String {
+        get {
+            plist.object(forKey: "MINTEGRAL_REWARDED_PLACEMENT_ID") as? String ?? ""
+        }
+    }
+    
+    static var MINTEGRAL_REWARDED_UNIT_ID:String {
+        get {
+            plist.object(forKey: "MINTEGRAL_REWARDED_UNIT_ID") as? String ?? ""
+        }
+    }
 }

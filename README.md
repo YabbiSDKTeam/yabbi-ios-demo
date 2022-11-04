@@ -2,7 +2,7 @@
 
 ## Руководство по Интеграции
 
-Версия релиза **1.2.1** | Дата релиза **14.09.2022**
+Версия релиза **1.3.0** | Дата релиза **4.11.2022**
 
 > Минимальные требования:
 >
@@ -25,7 +25,14 @@ platform :ios, '12.0'
 
 target 'Sample' do
     use_frameworks!
-    pod 'YabbiAds'
+
+    # Используйте для всех рекламных адаптеров
+    pod 'YabbiAdsMediation'
+
+    # Используйте для подключения нескольких рекламных адаптеров
+    pod 'YBIYandexAdapter'
+    pod 'YBIMintegralAdapter'
+
 end
 
 # Добавьте следующий код при возникновении ошибки Symbol not found
@@ -84,11 +91,18 @@ source 'https://cdn.cocoapods.org/'
 <string>We need this permission for better ad targetting</string>
 ```
 
+### Поддержка SKAdNetwork
+**YabbiAds SDK** поддерживает трекинг установок приложений с помощью фреймворка **SKAdNetwork**. Трекинг установок работает для всех устройств, даже если доступ к **IDFA** отсутствует.
+
+Чтобы включить функциональность, добавьте идентификаторы рекламных сетей в файл **Info.plist** приложения. 
+
+Список идентификаторов вы можете найти в файле [skadnetworkids.xml](skadnetworkids.xml).
+
 ## Шаг 3. Инициализация SDK
 
 > Перед инициализацией мы настоятельно рекомендуем получить все необходимые разрешения  от конечного пользователя.
 
-Импортируйте YabbiAds в **AppDelegate** класс и инициализируйте SDK:
+Импортируйте **YabbiAds** в **AppDelegate** класс и инициализируйте SDK:
 
 ```swift
 import YabbiAds
@@ -99,16 +113,36 @@ import YabbiAds
 ```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
+    // Установите для показа полноэкранной рекламы Яндекса
+    YabbiAds.setCustomParams(YBIAdaptersParameters.yandexInterstitialID, "замените_на_свой_id")
+
+    // Установите для показа рекламы с вознаграждением Яндекса
+    YabbiAds.setCustomParams(YBIAdaptersParameters.yandexInterstitialID, "замените_на_свой_id")
+    
+    // Установите для показа рекламы от Mintegral
+    YabbiAds.setCustomParams(YBIAdaptersParameters.mintegralAppID, "замените_на_свой_id")
+    YabbiAds.setCustomParams(YBIAdaptersParameters.mintegralApiKey, "замените_на_свой_id")
+    
+    // Установите для показа полноэкранной рекламы Mintegral
+    YabbiAds.setCustomParams(YBIAdaptersParameters.mintegralInterstitialPlacementId, "замените_на_свой_id")
+    YabbiAds.setCustomParams(YBIAdaptersParameters.mintegralInterstitialUnitId, "замените_на_свой_id")
+    
+    // Установите для показа рекламы с вознаграждением Mintegral
+    YabbiAds.setCustomParams(YBIAdaptersParameters.mintegralRewardedPlacementId, "замените_на_свой_id")
+    YabbiAds.setCustomParams(YBIAdaptersParameters.mintegralRewardedUnitId, "замените_на_свой_id")
+
     let configuration = YabbiConfiguration(
-        publisherID: "YOUR_PUBLISHER_ID",
-        interstitialID: "YOUR_INTERSTITIAL_ID",
-        rewardedID: "YOUR_REWARDED_ID"
+        publisherID: YOUR_PUBLISHER_ID,
+        interstitialID: YOUR_INTERSTITIAL_ID,
+        rewardedID: YOUR_REWARDED_ID
     )
         
     YabbiAds.initialize(configuration)
     return true
 }
 ```
+
+> Используйте метод **setCustomParams** до вызова метода **initialize**.
 
 1. Замените YOUR_PUBLISHER_ID на ключ издателя из [личного кабинета](https://mobileadx.ru).
 2. Замените YOUR_INTERSTITIAL_ID на ключ соответствующий баннерной рекламе из [личного кабинета](https://mobileadx.ru).
@@ -151,20 +185,6 @@ func locationManager(_ manager: CLLocationManager, didChangeAuthorization status
     }
 }
 ```
-
-
-Для обработки результата добавьте слудющий код в **Activity**
-```java
-@Override
-public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
-    super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-    
-    // ваш код
-}
-```
-
-Вы можете ознакомиться подробнее о геолокации и разрешениях на [5 шаге](Шаг-5.-Подготовьте-ваше-приложение-к-публикации).
-
 
 ## Шаг 5. Конфигурация типов рекламы
 YabbiAds SDK готов к использованию.  

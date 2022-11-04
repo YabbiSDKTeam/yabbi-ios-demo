@@ -5,7 +5,7 @@ source 'https://cdn.cocoapods.org/'
 
 target 'Yabbi iOS Demo' do
   use_frameworks!
-  pod 'YabbiAds'
+  pod 'YabbiAdsMediation'
 end
 
 post_install do |installer|
