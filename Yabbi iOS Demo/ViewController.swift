@@ -79,6 +79,8 @@ class ViewController: UIViewController, YbiInterstitialDelegate, YbiRewardedDele
         
         YabbiAds.setCustomParams(YBIAdaptersParameters.mintegralRewardedUnitId, AppConfig.MINTEGRAL_REWARDED_UNIT_ID)
         
+        YabbiAds.setUserConsent(YbiConsentManager.hasConsent)
+        
         YabbiAds.initialize(configuration)
         YabbiAds.setInterstitialDelegate(self)
         YabbiAds.setRewardedDelegate(self)

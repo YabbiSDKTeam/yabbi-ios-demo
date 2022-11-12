@@ -136,6 +136,9 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
         interstitialID: YOUR_INTERSTITIAL_ID,
         rewardedID: YOUR_REWARDED_ID
     )
+
+    // Если пользователь дал согласие на сбор данных
+    YabbiAds.setUserConsent(true)
         
     YabbiAds.initialize(configuration)
     return true
