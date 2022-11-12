@@ -33,7 +33,6 @@ class ViewController: UIViewController, YbiInterstitialDelegate, YbiRewardedDele
         
         YbiConsentManager.setDelegate(self)
         YbiConsentManager.enableLog(true)
-        YbiConsentManager.enableLog(<#T##value: Bool##Bool#>)
         YbiConsentManager.registerCustomVendor { builder in
             let _ = builder
                 .appendPolicyURL("https://yabbi.me/privacy-policies")
