@@ -8,17 +8,16 @@
 import UIKit
 import YabbiAds
 import CoreLocation
+import YBIConsentManager
 
 
-class ViewController: UIViewController, YbiInterstitialDelegate, YbiRewardedDelegate, CLLocationManagerDelegate  {
+class ViewController: UIViewController, YbiInterstitialDelegate, YbiRewardedDelegate, YbiConsentDelegate  {
     
     @IBOutlet weak var pubIDField: UITextField!
     @IBOutlet weak var interstitialUnitIDField: UITextField!
     @IBOutlet weak var rewardedUnitIDField: UITextField!
     @IBOutlet weak var LogField: UITextView!
     
-    
-    var locationManager: CLLocationManager?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,13 +30,29 @@ class ViewController: UIViewController, YbiInterstitialDelegate, YbiRewardedDele
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
-        locationManager = CLLocationManager()
-        locationManager?.delegate = self
         
-        initializeSDK(self)
+        YbiConsentManager.setDelegate(self)
+        YbiConsentManager.enableLog(true)
+        YbiConsentManager.enableLog(<#T##value: Bool##Bool#>)
+        YbiConsentManager.registerCustomVendor { builder in
+            let _ = builder
+                .appendPolicyURL("https://yabbi.me/privacy-policies")
+                .appendGDPR(true)
+                .appendBundle("me.yabbi.ads")
+                .appendName("Test name")
+        }
+        YbiConsentManager.loadManager()
     }
     
     @IBAction func initializeSDK(_ sender: Any) {
+        if(YbiConsentManager.hasConsent) {
+            initYabbi()
+        } else {
+            YbiConsentManager.showConsentWindow(self)
+        }
+    }
+    
+    private func initYabbi(){
         let pubID = pubIDField.text ?? ""
         let bannerID = interstitialUnitIDField.text ?? ""
         let rewardedID = rewardedUnitIDField.text ?? ""
@@ -69,12 +84,29 @@ class ViewController: UIViewController, YbiInterstitialDelegate, YbiRewardedDele
         YabbiAds.setInterstitialDelegate(self)
         YabbiAds.setRewardedDelegate(self)
        
-        locationManager?.requestWhenInUseAuthorization()
+        
         writeNewLog(messgae: "PubID: \(pubID)\nBannerID: \(bannerID)\nVideoID: \(rewardedID)", new: true)
     }
+   
+    func onConsentManagerLoaded() {
+        writeNewLog(messgae: "onConsentManagerLoaded", new: true)
+    }
     
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-       // You can handle status here
+    func onConsentManagerLoadFailed(_ error: String) {
+        writeNewLog(messgae: "onConsentManagerLoadFailed \(error)", new: false)
+    }
+    
+    func onConsentWindowShown() {
+        writeNewLog(messgae: "onConsentWindowShown", new: false)
+    }
+    
+    func onConsentManagerShownFailed(_ error: String) {
+        writeNewLog(messgae: "onConsentManagerShownFailed \(error)", new: false)
+    }
+    
+    func onConsentWindowClosed(_ hasConsent: Bool) {
+        writeNewLog(messgae: "onConsentManagerShownFailed - hasConsent: \(hasConsent)", new: false)
+        initYabbi()
     }
     
     @IBAction func IntersititialButtonTapped(_ sender: Any) {
