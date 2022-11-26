@@ -1,169 +1,168 @@
-//
-//  ViewController.swift
-//  Yabbi iOS Demo
-//
-//  Created by perpointt on 22.06.2022.
-//
-
 import UIKit
 import YabbiAds
 import CoreLocation
+import YBIConsentManager
 
 
-class ViewController: UIViewController, YbiInterstitialDelegate, YbiRewardedDelegate, CLLocationManagerDelegate  {
+class ViewController: UIViewController  {
     
-    @IBOutlet weak var pubIDField: UITextField!
-    @IBOutlet weak var interstitialUnitIDField: UITextField!
-    @IBOutlet weak var rewardedUnitIDField: UITextField!
-    @IBOutlet weak var LogField: UITextView!
+    @IBOutlet weak var Logger: UILabel!
     
+    @IBAction func loadInterstitialAd(_ sender: Any) {
+        YabbiAds.loadAd(AdType.INTERSTITIAL)
+    }
+    @IBAction func showInterstitialAd(_ sender: Any) {
+        YabbiAds.showAd(AdType.INTERSTITIAL, self)
+    }
+    @IBAction func destroyInterstitialAd(_ sender: Any) {
+        YabbiAds.destroyAd(AdType.INTERSTITIAL)
+    }
     
-    var locationManager: CLLocationManager?
+    @IBAction func loadRewardedAd(_ sender: Any) {
+        YabbiAds.loadAd(AdType.REWARDED)
+    }
+    @IBAction func showRewardedAd(_ sender: Any) {
+        YabbiAds.showAd(AdType.REWARDED, self)
+    }
+    @IBAction func destroyRewardedAd(_ sender: Any) {
+        YabbiAds.destroyAd(AdType.REWARDED)
+    }
+    
+    @IBAction func showConsent(_ sender: Any) {
+        YbiConsentManager.showConsentWindow(self)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        configureTextFields()
-        
-        pubIDField.text = AppConfig.YABBI_PUBLISHER_ID
-        interstitialUnitIDField.text = AppConfig.YABBI_INTERSTITIAL_ID
-        rewardedUnitIDField.text = AppConfig.YABBI_REWARDED_ID
-        
-        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
-        view.addGestureRecognizer(tap)
-        locationManager = CLLocationManager()
-        locationManager?.delegate = self
-        
-        initializeSDK(self)
+        initializeYabbi()
     }
     
-    @IBAction func initializeSDK(_ sender: Any) {
-        let pubID = pubIDField.text ?? ""
-        let bannerID = interstitialUnitIDField.text ?? ""
-        let rewardedID = rewardedUnitIDField.text ?? ""
-        
-        let configuration = YabbiConfiguration(
-            publisherID: pubID,
-            interstitialID: bannerID,
-            rewardedID: rewardedID
-        )
-        
-        YabbiAds.setCustomParams(YBIAdaptersParameters.yandexInterstitialID, AppConfig.YANDEX_INTERSTITIAL_ID)
-        YabbiAds.setCustomParams(YBIAdaptersParameters.yandexInterstitialID, AppConfig.YANDEX_REWARDED_ID)
-        
-        
-        
-        YabbiAds.setCustomParams(YBIAdaptersParameters.mintegralAppID, AppConfig.MINTEGRAL_APP_ID)
-        
-        YabbiAds.setCustomParams(YBIAdaptersParameters.mintegralApiKey, AppConfig.MINTEGRAL_API_KEY)
-        
-        YabbiAds.setCustomParams(YBIAdaptersParameters.mintegralInterstitialPlacementId, AppConfig.MINTEGRAL_INTERSTITIAL_PLACEMENT_ID)
-        
-        YabbiAds.setCustomParams(YBIAdaptersParameters.mintegralInterstitialUnitId, AppConfig.MINTEGRAL_INTERSTITIAL_UNIT_ID)
-        
-        YabbiAds.setCustomParams(YBIAdaptersParameters.mintegralRewardedPlacementId, AppConfig.MINTEGRAL_REWARDED_PLACEMENT_ID)
-        
-        YabbiAds.setCustomParams(YBIAdaptersParameters.mintegralRewardedUnitId, AppConfig.MINTEGRAL_REWARDED_UNIT_ID)
-        
-        YabbiAds.initialize(configuration)
+    private func initializeYabbi() {
+        YbiConsentManager.setDelegate(self)
         YabbiAds.setInterstitialDelegate(self)
         YabbiAds.setRewardedDelegate(self)
-       
-        locationManager?.requestWhenInUseAuthorization()
-        writeNewLog(messgae: "PubID: \(pubID)\nBannerID: \(bannerID)\nVideoID: \(rewardedID)", new: true)
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-       // You can handle status here
-    }
-    
-    @IBAction func IntersititialButtonTapped(_ sender: Any) {
-        writeNewLog(messgae: "Interstitial ad loading", new: true)
-        YabbiAds.loadAd(AdType.INTERSTITIAL)
-    }
-    
-    @IBAction func VideoButtonTapped(_ sender: Any) {
-        writeNewLog(messgae: "Rewarded ad loading", new: true)
-        YabbiAds.loadAd(AdType.REWARDED)
-    }
-    
-    private func writeNewLog(messgae:String, new: Bool = false) -> Void{
         
-        if(new){
-            LogField.text = "\(messgae)"
-        }else {
-            let current = LogField.text ?? ""
-            LogField.text = "\(current)\n\(messgae)"
+        guard let filePath = Bundle.main.path(forResource: "Env", ofType: "plist"),
+              let plist = NSDictionary(contentsOfFile: filePath) else {
+            logEvent("Env.plist not found. See instruction in DEMO_APP_INSTALLATION.md.");
+            return
         }
         
+        let YABBI_PUBLISHER_ID = getKeyFromPlist(plist, "YABBI_PUBLISHER_ID")
+        let YABBI_INTERSTITIAL_ID = getKeyFromPlist(plist, "YABBI_INTERSTITIAL_ID")
+        let YABBI_REWARDED_ID = getKeyFromPlist(plist, "YABBI_REWARDED_ID")
+        let YANDEX_INTERSTITIAL_ID = getKeyFromPlist(plist, "YANDEX_INTERSTITIAL_ID")
+        let YANDEX_REWARDED_ID = getKeyFromPlist(plist, "YANDEX_REWARDED_ID")
+        let MINTEGRAL_APP_ID = getKeyFromPlist(plist, "MINTEGRAL_APP_ID")
+        let MINTEGRAL_API_KEY = getKeyFromPlist(plist, "MINTEGRAL_API_KEY")
+        let MINTEGRAL_INTERSTITIAL_PLACEMENT_ID = getKeyFromPlist(plist, "MINTEGRAL_INTERSTITIAL_PLACEMENT_ID")
+        let MINTEGRAL_INTERSTITIAL_ID = getKeyFromPlist(plist, "MINTEGRAL_INTERSTITIAL_ID")
+        let MINTEGRAL_REWARDED_PLACEMENT_ID = getKeyFromPlist(plist, "MINTEGRAL_REWARDED_PLACEMENT_ID")
+        let MINTEGRAL_REWARDED_ID = getKeyFromPlist(plist, "MINTEGRAL_REWARDED_ID")
+        
+        YabbiAds.setCustomParams(YBIAdaptersParameters.yandexInterstitialID, YANDEX_INTERSTITIAL_ID)
+        YabbiAds.setCustomParams(YBIAdaptersParameters.yandexRewardedID, YANDEX_REWARDED_ID)
+        
+        YabbiAds.setCustomParams(YBIAdaptersParameters.mintegralAppID, MINTEGRAL_APP_ID)
+        YabbiAds.setCustomParams(YBIAdaptersParameters.mintegralApiKey, MINTEGRAL_API_KEY)
+        YabbiAds.setCustomParams(YBIAdaptersParameters.mintegralInterstitialPlacementId, MINTEGRAL_INTERSTITIAL_PLACEMENT_ID)
+        YabbiAds.setCustomParams(YBIAdaptersParameters.mintegralInterstitialUnitId, MINTEGRAL_INTERSTITIAL_ID)
+        YabbiAds.setCustomParams(YBIAdaptersParameters.mintegralRewardedPlacementId, MINTEGRAL_REWARDED_PLACEMENT_ID)
+        YabbiAds.setCustomParams(YBIAdaptersParameters.mintegralRewardedUnitId, MINTEGRAL_REWARDED_ID)
+        
+        let config = YabbiConfiguration(
+            publisherID: YABBI_PUBLISHER_ID,
+            interstitialID: YABBI_INTERSTITIAL_ID,
+            rewardedID: YABBI_REWARDED_ID
+        )
+        
+        YabbiAds.setUserConsent(YbiConsentManager.hasConsent)
+        
+        YabbiAds.initialize(config)
+        
+        YbiConsentManager.loadManager()
     }
     
-    private func configureTextFields(){
-        [pubIDField,interstitialUnitIDField, rewardedUnitIDField].forEach { textField in
-            guard let field = textField else {
-                return
-            }
-            
-            field.layer.borderWidth = 1
-            field.layer.cornerRadius = 4
-            field.layer.masksToBounds = true
-            field.layer.borderColor =  UIColor(red: 0.63, green: 0.67, blue: 0.70, alpha: 1.00).cgColor
-        }
+    private func getKeyFromPlist(_  plist:NSDictionary, _ key:String) -> String {
+        return plist.object(forKey: key) as? String ?? ""
     }
     
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
+    func logEvent(_ messgae:String) -> Void{
+        let current = Logger.text ?? ""
+        Logger.text = "\(current)\n\(messgae)"
+    }
+}
+
+extension ViewController:YbiConsentDelegate{
+    func onConsentManagerLoaded() {
+        logEvent( "onConsentManagerLoaded")
     }
     
-    func onInterstitialLoaded() {
-        writeNewLog(messgae: "onInterstitialLoaded", new: false)
-        YabbiAds.showAd(AdType.INTERSTITIAL, self)
+    func onConsentManagerLoadFailed(_ error: String) {
+        logEvent("onConsentManagerLoadFailed \(error)")
     }
     
-    func onInterstitialLoadFailed(_ error: String) {
-        writeNewLog(messgae: "onInterstitialLoadFailed: \(error)", new: false)
+    func onConsentWindowShown() {
+        logEvent("onConsentWindowShown")
     }
     
-    func onInterstitialShown() {
-        writeNewLog(messgae: "onInterstitialShown", new: false)
+    func onConsentManagerShownFailed(_ error: String) {
+        logEvent("onConsentManagerShownFailed \(error)")
     }
     
-    func onInterstitialShowFailed(_ error: String) {
-        writeNewLog(messgae: "onInterstitialShowFailed: \(error)", new: false)
+    func onConsentWindowClosed(_ hasConsent: Bool) {
+        YabbiAds.setUserConsent(hasConsent)
+        logEvent("onConsentWindowClosed - hasConsent: \(hasConsent)")
     }
-    
-    func onInterstitialClosed() {
-        writeNewLog(messgae: "onInterstitialClosed", new: false)
-    }
-    
-    func onRewardedLoaded() {
-        YabbiAds.showAd(AdType.REWARDED, self)
-        writeNewLog(messgae: "onRewardedVideolLoaded", new: false)
-    }
-    
-    func oRewardedLoadFailed(_ error: String) {
-        writeNewLog(messgae: "oRewardedVideoLoadFailed: \(error)", new: false)
-    }
-    
-    func onRewardedShown() {
-        writeNewLog(messgae: "onRewardedVideoShown", new: false)
-    }
-    
-    func onRewardedShowFailed(_ error: String) {
-        writeNewLog(messgae: "onRewardedVideoShowFailed: \(error)", new: false)
-    }
-    
-    func onRewardedClosed() {
-        writeNewLog(messgae: "onRewardedVideoClosed", new: false)
-    }
-    
-    func onRewardedFinished() {
-        writeNewLog(messgae: "onRewardedVideoFinished", new: false)
-    }
-    
 }
 
 
-typealias LogAlias = (String, Bool)  -> Void
+extension ViewController:YbiRewardedDelegate {
+    func onRewardedLoaded() {
+        logEvent("onRewardedVideolLoaded")
+    }
+    
+    func oRewardedLoadFailed(_ error: String) {
+        logEvent("oRewardedVideoLoadFailed: \(error)")
+    }
+    
+    func onRewardedShown() {
+        logEvent("onRewardedVideoShown")
+    }
+    
+    func onRewardedShowFailed(_ error: String) {
+        logEvent("onRewardedVideoShowFailed: \(error)")
+    }
+    
+    func onRewardedClosed() {
+        logEvent("onRewardedVideoClosed")
+    }
+    
+    func onRewardedFinished() {
+        logEvent("onRewardedVideoFinished")
+    }
+}
 
 
+extension ViewController: YbiInterstitialDelegate{
+    func onInterstitialLoaded() {
+        logEvent("onInterstitialLoaded")
+    }
+    
+    func onInterstitialLoadFailed(_ error: String) {
+        logEvent("onInterstitialLoadFailed: \(error)")
+    }
+    
+    func onInterstitialShown() {
+        logEvent("onInterstitialShown")
+    }
+    
+    func onInterstitialShowFailed(_ error: String) {
+        logEvent("onInterstitialShowFailed: \(error)")
+    }
+    
+    func onInterstitialClosed() {
+        logEvent("onInterstitialClosed")
+    }
+}

@@ -57,6 +57,7 @@ PODS:
   - YandexMobileMetrica/Static/Core (4.4.0)
   - YandexMobileMetrica/Static/Crashes (4.4.0):
     - YandexMobileMetrica/Static/Core
+  - YBIConsentManager (1.0.0)
   - YBIMintegralAdapter (1.0.0):
     - MintegralAdSDK
     - YabbiAds
@@ -67,6 +68,7 @@ PODS:
 
 DEPENDENCIES:
   - YabbiAdsMediation
+  - YBIConsentManager
 
 SPEC REPOS:
   https://github.com/YabbiSDKTeam/CocoaPods:
@@ -81,6 +83,7 @@ SPEC REPOS:
     - YandexMobileAds
     - YandexMobileAdsInstream
     - YandexMobileMetrica
+    - YBIConsentManager
 
 SPEC CHECKSUMS:
   MintegralAdSDK: c8e99fd9896bc4ebec95115a8ec413dc2f678010
@@ -91,9 +94,10 @@ SPEC CHECKSUMS:
   YandexMobileAds: 3d7708df615f92815a3acedf9869da46d0b4d65e
   YandexMobileAdsInstream: 9af68b07d930a9d16b343838ebffe6605ef086a2
   YandexMobileMetrica: baf7cea47cb87fc9af963c4f747ce8dd7df3d7c0
+  YBIConsentManager: 636a78724c5dbb39cd560287722d8039de8497a5
   YBIMintegralAdapter: b18ac24261dd4025c7d20e6305325a67bd9c2bfe
   YBIYandexAdapter: 29bc14211c18f8aa053ddabbd5fbea9cc7f19caa
 
-PODFILE CHECKSUM: d72a1443d3d9b1c4187d3b07600866666715f790
+PODFILE CHECKSUM: 9aee5c0d316945bce143cbb5d5ecbc59fa319cc7
 
 COCOAPODS: 1.11.3
