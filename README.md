@@ -2,7 +2,7 @@
 
 ## Руководство по Интеграции
 
-Версия релиза **1.3.1** | Дата релиза **12.11.2022**
+Версия релиза **1.3.2** | Дата релиза **26.11.2022**
 
 > Минимальные требования:
 >
@@ -151,43 +151,16 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 2. Замените YOUR_INTERSTITIAL_ID на ключ соответствующий баннерной рекламе из [личного кабинета](https://mobileadx.ru).
 3. Замените YOUR_REWARDED_ID на ключ соответствующий видео с вознаграждением из [личного кабинета](https://mobileadx.ru).
 
+## Шаг 4. GDPR и CCPA
+**GDPR** - Это набор правил, призванных дать гражданам ЕС больше контроля над своими личными данными. Любые издатели приложений, которые созданы в ЕС или имеющие пользователей, базирующихся в Европе, обязаны соблюдать GDPR или рискуют столкнуться с большими штрафами
 
-## Шаг 4. Запрос геолокации пользователя
-Для эффективного таргетирования рекламы SDK собирает данные геолокации.  
-Для доступа к геолокации требуется разрешение пользователя. Добавьте следующий ключ в свой файл **Info.plist** проекта. 
-```plist
-<key>NSLocationWhenInUseUsageDescription</key>
-<string>We need this permission for better ad targetting</string>
+Для того чтобы **YabbiAds** и наши поставщики рекламы могли предоставлять рекламу, которая наиболее релевантна для ваших пользователей, как издателю мобильных приложений, вам необходимо получить явное согласие пользователей в регионах, попадающих под действие законов GDPR и CCPA.
 
-```
-Для запроса разрешения следуйте инструкциям ниже
+Чтобы получить согласие на сбор персональных данных ваших пользователей, мы предлагаем вам воспользоваться готовым решением - **YBIConsentManager**.
 
-1. Добавьте переменную типа **CLLocationManager** в свой **UIViewController**
-```swift
-var locationManager: CLLocationManager?
-```
-2. Добавьте делигат **CLLocationManagerDelegate** к своему **UIViewController**
-```swift
-class YourViewController: UIViewController, CLLocationManagerDelegate {
-```
-3. Добавьте следующий код во **viewDidLoad**
-```swift
-override func viewDidLoad() {
-    super.viewDidLoad()
+**YBIConsentManager** поставляется с заранее подготовленным окном согласия, которое вы можете легко показать своим пользователям. Это означает, что вам больше не нужно создавать собственное окно согласия.
 
-    locationManager = CLLocationManager()
-    locationManager?.delegate = self
-    locationManager?.requestAlwaysAuthorization()
-}
-```
-4. Для прослушивания изменения статуса используйте следующий код
-```swift
-func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-    if status == .authorizedAlways {
-      // Ваш код
-    }
-}
-```
+Ознакомьтесь с использованием **YBIConsentManager** по ссылке - [клик](CONSENT_MANAGER_DOC.md).
 
 ## Шаг 5. Конфигурация типов рекламы
 YabbiAds SDK готов к использованию.  

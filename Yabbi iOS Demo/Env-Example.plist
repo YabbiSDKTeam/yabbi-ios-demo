@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<!--
-   Env-Example.plist
-   Yabbi iOS Demo
-
-   Created by perpointt on 14.09.2022.
-   Copyright (c) 2022 ___ORGANIZATIONNAME___. All rights reserved.
--->
 <plist version="1.0">
-<dict/>
+<dict>
+	<key>MINTEGRAL_APP_ID</key>
+	<string>вставьте_свой_id</string>
+	<key>MINTEGRAL_API_KEY</key>
+	<string>вставьте_свой_id</string>
+	<key>MINTEGRAL_INTERSTITIAL_PLACEMENT_ID</key>
+	<string>вставьте_свой_id</string>
+	<key>MINTEGRAL_INTERSTITIAL_UNIT_ID</key>
+	<string>вставьте_свой_id</string>
+	<key>MINTEGRAL_REWARDED_PLACEMENT_ID</key>
+	<string>вставьте_свой_id</string>
+	<key>MINTEGRAL_REWARDED_UNIT_ID</key>
+	<string>вставьте_свой_id</string>
+	<key>YABBI_PUBLISHER_ID</key>
+	<string>вставьте_свой_id</string>
+	<key>YABBI_INTERSTITIAL_ID</key>
+	<string>вставьте_свой_id</string>
+	<key>YABBI_REWARDED_ID</key>
+	<string>вставьте_свой_id</string>
+	<key>YANDEX_INTERSTITIAL_ID</key>
+	<string>вставьте_свой_id</string>
+	<key>YANDEX_REWARDED_ID</key>
+	<string>вставьте_свой_id</string>
+</dict>
 </plist>
