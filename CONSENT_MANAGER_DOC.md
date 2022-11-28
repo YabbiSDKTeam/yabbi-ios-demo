@@ -106,8 +106,7 @@ class ViewController: UIViewController  {
 ```
 
 ## Методы обратного вызова
-Для работы с рекламой необходимо предоставить класс для передачи событий жизненного цикла рекламного контейнера.
-Для инициализации рекламного контейнера выполните следующие действия:
+Для обработки событий жизненного цикла необходимо предоставить класс для работы.
 ```swift
 YbiConsentManager.setDelegate(self)
 ```
@@ -122,7 +121,7 @@ extension YourViewController: YbiConsentDelegate {
     }
     
     func onConsentManagerLoadFailed(_ error: String) {
-         // Вызывется если при загрузке произошла ошибка
+        // Вызывется если при загрузке произошла ошибка
     }
     
     func onConsentWindowShown() {
@@ -130,7 +129,7 @@ extension YourViewController: YbiConsentDelegate {
     }
     
     func onConsentManagerShownFailed(_ error: String) {
-         // Вызывется если при показе экрана произошла ошибка
+        // Вызывется если при показе экрана произошла ошибка
     }
     
     func onConsentWindowClosed(_ hasConsent: Bool) {
@@ -142,7 +141,7 @@ extension YourViewController: YbiConsentDelegate {
 ```
 ## Обновление статуса
 Для обновления статуса **YabbiAds** используется метод **setUserConsent**.
-```java
+```swift
 YabbiAds.setUserConsent(YbiConsentManager.hasConsent);
 ```
 
