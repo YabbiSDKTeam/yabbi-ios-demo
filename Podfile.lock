@@ -43,9 +43,9 @@ PODS:
     - YabbiAds
     - YBIMintegralAdapter
     - YBIYandexAdapter
-  - YandexMobileAds (5.2.0):
-    - YandexMobileAds/Static (= 5.2.0)
-  - YandexMobileAds/Static (5.2.0):
+  - YandexMobileAds (5.2.1):
+    - YandexMobileAds/Static (= 5.2.1)
+  - YandexMobileAds/Static (5.2.1):
     - YandexMobileMetrica (< 5.0.0, >= 4.0.0)
   - YandexMobileAdsInstream (0.12.0):
     - YandexMobileAds (~> 5.2.0)
@@ -57,19 +57,17 @@ PODS:
   - YandexMobileMetrica/Static/Core (4.4.0)
   - YandexMobileMetrica/Static/Crashes (4.4.0):
     - YandexMobileMetrica/Static/Core
-  - YBIConsentManager (1.0.1)
-  - YBIMintegralAdapter (1.0.0):
-    - MintegralAdSDK
+  - YBIConsentManager (1.0.2)
+  - YBIMintegralAdapter (1.0.1):
+    - MintegralAdSDK (~> 7.2.6)
     - YabbiAds
-  - YBIYandexAdapter (1.0.0):
+  - YBIYandexAdapter (1.0.1):
     - YabbiAds
-    - YandexMobileAds
-    - YandexMobileAdsInstream
+    - YandexMobileAds (~> 5.2.0)
+    - YandexMobileAdsInstream (~> 0.12.0)
 
 DEPENDENCIES:
   - YabbiAdsMediation
-  - YandexMobileAds (= 5.2.0)
-  - YandexMobileAdsInstream (= 0.12.0)
   - YBIConsentManager
 
 SPEC REPOS:
@@ -92,13 +90,13 @@ SPEC CHECKSUMS:
   WKJavaScriptController: 25cfe98fa9617dc38e1f951a3a3f6adf6c77875e
   YabbiAds: c5b3968caa2fae639da23c56402cb661453b06a6
   YabbiAdsMediation: 621b47060dac3efc58460965980be990bef5c10f
-  YandexMobileAds: 380b41e1185a872b32b09f8a66f598eb8ab46ec3
+  YandexMobileAds: 3d7708df615f92815a3acedf9869da46d0b4d65e
   YandexMobileAdsInstream: 9af68b07d930a9d16b343838ebffe6605ef086a2
   YandexMobileMetrica: baf7cea47cb87fc9af963c4f747ce8dd7df3d7c0
-  YBIConsentManager: da1e10cecd804f203ec3bb2905f09bd9ff326e6b
-  YBIMintegralAdapter: 0148e838192710891b1e4612cabffcdbdbe3e2ed
-  YBIYandexAdapter: 095d58938f3319cf59e6857608c56f88cd2f93c3
+  YBIConsentManager: e6f83ca261140d0c8f6a24ddc6e67c2910e6a01f
+  YBIMintegralAdapter: 16cd7d37508331d9dbe69bfca095cdd9aabb9a55
+  YBIYandexAdapter: 10c69eb24e360189aac8d9d712de1b318d1fbec8
 
-PODFILE CHECKSUM: 18dd8a0e47334db7ab48b3db82e0b0a067be6f62
+PODFILE CHECKSUM: 9aee5c0d316945bce143cbb5d5ecbc59fa319cc7
 
 COCOAPODS: 1.11.3
