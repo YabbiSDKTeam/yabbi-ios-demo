@@ -61,6 +61,6 @@ YabbiAds.showAd(AdType.INTERSTITIAL, self)
 
 ## Уничтожение рекламного контейнера
 Для уничтожения рекламы добавьте следующий код в вашем приложении.
-```AdType
+```swift
 YabbiAds.destroyAd(AdType.INTERSTITIAL)
 ```
