@@ -123,7 +123,7 @@ extension ViewController:YbiRewardedDelegate {
         logEvent("onRewardedVideolLoaded")
     }
     
-    func oRewardedLoadFailed(_ error: String) {
+    func onRewardedLoadFailed(_ error: String) {
         logEvent("oRewardedVideoLoadFailed: \(error)")
     }
     

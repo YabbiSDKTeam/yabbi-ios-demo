@@ -1,11 +1,10 @@
 platform :ios, '12.0'
 
-source 'https://github.com/YabbiSDKTeam/CocoaPods'
 source 'https://cdn.cocoapods.org/'
 
 target 'Yabbi iOS Demo' do
   use_frameworks!
-  pod 'YabbiAdsMediation'
+  pod 'YabbiAdsMediation', '~> 1.4.0'
   pod 'YBIConsentManager'
 end
 
