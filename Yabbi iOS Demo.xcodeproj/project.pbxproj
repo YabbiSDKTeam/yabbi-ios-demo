@@ -13,13 +13,10 @@
 		7476692B28639D750003B985 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7476692928639D750003B985 /* Main.storyboard */; };
 		7476692D28639D750003B985 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7476692C28639D750003B985 /* Assets.xcassets */; };
 		7476693028639D750003B985 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7476692E28639D750003B985 /* LaunchScreen.storyboard */; };
-		BDC1CB2E9FF74E5858B13536 /* Pods_Yabbi_iOS_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C44A36DE1155DECC32B322B /* Pods_Yabbi_iOS_Demo.framework */; };
+		B4B39B66715FA0832CEB3B80 /* Pods_Yabbi_iOS_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFBC6C6B26ADDB6D9975BD28 /* Pods_Yabbi_iOS_Demo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		087DE4B5FDBF5C867CBA3329 /* Pods-Yabbi iOS Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yabbi iOS Demo.release.xcconfig"; path = "Target Support Files/Pods-Yabbi iOS Demo/Pods-Yabbi iOS Demo.release.xcconfig"; sourceTree = "<group>"; };
-		1C44A36DE1155DECC32B322B /* Pods_Yabbi_iOS_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yabbi_iOS_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6EBB4F9C586B026BD3D9E17E /* Pods-Yabbi iOS Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yabbi iOS Demo.debug.xcconfig"; path = "Target Support Files/Pods-Yabbi iOS Demo/Pods-Yabbi iOS Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		740643B828D24C540048BAD0 /* Env.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Env.plist; sourceTree = "<group>"; };
 		7476692028639D750003B985 /* Yabbi iOS Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yabbi iOS Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7476692328639D750003B985 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -29,6 +26,9 @@
 		7476692F28639D750003B985 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7476693128639D750003B985 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		747669372863A40C0003B985 /* SwiftLocation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftLocation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BB7B33A5F1D96B1896922A2 /* Pods-Yabbi iOS Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yabbi iOS Demo.release.xcconfig"; path = "Target Support Files/Pods-Yabbi iOS Demo/Pods-Yabbi iOS Demo.release.xcconfig"; sourceTree = "<group>"; };
+		AFBC6C6B26ADDB6D9975BD28 /* Pods_Yabbi_iOS_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yabbi_iOS_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E144C35F97FDF1C082EFDB02 /* Pods-Yabbi iOS Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yabbi iOS Demo.debug.xcconfig"; path = "Target Support Files/Pods-Yabbi iOS Demo/Pods-Yabbi iOS Demo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,7 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDC1CB2E9FF74E5858B13536 /* Pods_Yabbi_iOS_Demo.framework in Frameworks */,
+				B4B39B66715FA0832CEB3B80 /* Pods_Yabbi_iOS_Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,7 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				747669372863A40C0003B985 /* SwiftLocation.framework */,
-				1C44A36DE1155DECC32B322B /* Pods_Yabbi_iOS_Demo.framework */,
+				AFBC6C6B26ADDB6D9975BD28 /* Pods_Yabbi_iOS_Demo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -87,8 +87,8 @@
 		CF6E968165EBC06CF5F78585 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6EBB4F9C586B026BD3D9E17E /* Pods-Yabbi iOS Demo.debug.xcconfig */,
-				087DE4B5FDBF5C867CBA3329 /* Pods-Yabbi iOS Demo.release.xcconfig */,
+				E144C35F97FDF1C082EFDB02 /* Pods-Yabbi iOS Demo.debug.xcconfig */,
+				8BB7B33A5F1D96B1896922A2 /* Pods-Yabbi iOS Demo.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -100,12 +100,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7476693428639D750003B985 /* Build configuration list for PBXNativeTarget "Yabbi iOS Demo" */;
 			buildPhases = (
-				582AC2E799FABACD165A9B04 /* [CP] Check Pods Manifest.lock */,
+				5636EAEA9AF9B5C73BCD7021 /* [CP] Check Pods Manifest.lock */,
 				7476691C28639D750003B985 /* Sources */,
 				7476691D28639D750003B985 /* Frameworks */,
 				7476691E28639D750003B985 /* Resources */,
-				094F364F181067EDC5728D6A /* [CP] Embed Pods Frameworks */,
-				16AD375E8A786A9207781040 /* [CP] Copy Pods Resources */,
+				4DA173BBD670F5B1BB71A772 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -164,7 +163,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		094F364F181067EDC5728D6A /* [CP] Embed Pods Frameworks */ = {
+		4DA173BBD670F5B1BB71A772 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -181,24 +180,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Yabbi iOS Demo/Pods-Yabbi iOS Demo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		16AD375E8A786A9207781040 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Yabbi iOS Demo/Pods-Yabbi iOS Demo-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Yabbi iOS Demo/Pods-Yabbi iOS Demo-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Yabbi iOS Demo/Pods-Yabbi iOS Demo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		582AC2E799FABACD165A9B04 /* [CP] Check Pods Manifest.lock */ = {
+		5636EAEA9AF9B5C73BCD7021 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -370,13 +352,13 @@
 		};
 		7476693528639D750003B985 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6EBB4F9C586B026BD3D9E17E /* Pods-Yabbi iOS Demo.debug.xcconfig */;
+			baseConfigurationReference = E144C35F97FDF1C082EFDB02 /* Pods-Yabbi iOS Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 22;
+				CURRENT_PROJECT_VERSION = 29;
 				DEVELOPMENT_TEAM = CAA9292QHH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Yabbi iOS Demo/Info.plist";
@@ -398,6 +380,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.yabbi.ads;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -406,13 +391,13 @@
 		};
 		7476693628639D750003B985 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 087DE4B5FDBF5C867CBA3329 /* Pods-Yabbi iOS Demo.release.xcconfig */;
+			baseConfigurationReference = 8BB7B33A5F1D96B1896922A2 /* Pods-Yabbi iOS Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 22;
+				CURRENT_PROJECT_VERSION = 29;
 				DEVELOPMENT_TEAM = CAA9292QHH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Yabbi iOS Demo/Info.plist";
@@ -434,6 +419,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.yabbi.ads;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

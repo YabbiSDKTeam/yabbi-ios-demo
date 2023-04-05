@@ -78,6 +78,7 @@ class ViewController: UIViewController  {
         )
         
         YabbiAds.setUserConsent(YbiConsentManager.hasConsent)
+        YabbiAds.enableDebug(true)
         
         YabbiAds.initialize(config)
         
