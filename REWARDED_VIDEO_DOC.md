@@ -4,7 +4,7 @@
 ## Загрузка рекламы
 Для загрузки рекламы используйте следующий код
 ```swift
-YabbiAds.loadAd(AdType.REWARDED)
+YabbiAds.loadAd(YabbiAds.REWARDED)
 ```
 
 ## Методы обратного вызова
@@ -47,24 +47,24 @@ extension YourViewController: YbiRewardedDelegate {
 ## Проверка загрузки рекламы
 Вы можете проверить статус загрузки перед работы с рекламой.
 ```swift
-YabbiAds.isAdLoaded(AdType.REWARDED)
+YabbiAds.isAdLoaded(YabbiAds.REWARDED)
 ```
 
 Рекомендуем всегда проверять статус загрузки рекламы, прежде чем пытаться ее показать.
 ```swift
-if(YabbiAds.isAdLoaded(AdType.REWARDED)) {
-    YabbiAds.showAd(AdType.REWARDED, self)
+if(YabbiAds.isAdLoaded(YabbiAds.REWARDED)) {
+    YabbiAds.showAd(YabbiAds.REWARDED, self)
 }
 ```
 
 ## Показ рекламы
 Для показа рекламы используйте метод:
 ```swift
-YabbiAds.showAd(AdType.REWARDED, self)
+YabbiAds.showAd(YabbiAds.REWARDED, self)
 ```
 
 ## Уничтожение рекламного контейнера
 Для уничтожения рекламы добавьте следующий код в вашем приложении.
 ```swift
-YabbiAds.destroyAd(AdType.REWARDED)
+YabbiAds.destroyAd(YabbiAds.REWARDED)
 ```

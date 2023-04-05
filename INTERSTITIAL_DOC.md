@@ -4,7 +4,7 @@
 ## Загрузка рекламы
 Для загрузки рекламы используйте следующий код
 ```swift
-YabbiAds.loadAd(AdType.INTERSTITIAL)
+YabbiAds.loadAd(YabbiAds.INTERSTITIAL)
 ```
 
 ## Методы обратного вызова
@@ -43,24 +43,24 @@ extension YourViewController: YbiInterstitialDelegate {
 ## Проверка загрузки рекламы
 Вы можете проверить статус загрузки перед работы с рекламой.
 ```swift
-YabbiAds.isAdLoaded(AdType.INTERSTITIAL)
+YabbiAds.isAdLoaded(YabbiAds.INTERSTITIAL)
 ```
 
 Рекомендуем всегда проверять статус загрузки рекламы, прежде чем пытаться ее показать.
 ```swift
-if(YabbiAds.isAdLoaded(AdType.INTERSTITIAL)) {
-    YabbiAds.showAd(AdType.INTERSTITIAL, self)
+if(YabbiAds.isAdLoaded(YabbiAds.INTERSTITIAL)) {
+    YabbiAds.showAd(YabbiAds.INTERSTITIAL, self)
 }
 ```
 
 ## Показ рекламы
 Для показа рекламы используйте метод:
 ```swift
-YabbiAds.showAd(AdType.INTERSTITIAL, self)
+YabbiAds.showAd(YabbiAds.INTERSTITIAL, self)
 ```
 
 ## Уничтожение рекламного контейнера
 Для уничтожения рекламы добавьте следующий код в вашем приложении.
 ```swift
-YabbiAds.destroyAd(AdType.INTERSTITIAL)
+YabbiAds.destroyAd(YabbiAds.INTERSTITIAL)
 ```
