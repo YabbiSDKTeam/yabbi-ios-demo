@@ -22,7 +22,7 @@ extension YourViewController: YbiRewardedDelegate {
         // Вызывется при загрузке рекламы
     }
 
-    func oRewardedLoadFailed(_ error: String) {
+    func onRewardedLoadFailed(_ error: String) {
         // Вызывется если при загрузке рекламы произошла ошибка
     }
 
