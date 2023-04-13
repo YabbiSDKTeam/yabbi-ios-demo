@@ -2,7 +2,7 @@
 
 ## Руководство по Интеграции
 
-Версия релиза **1.4.0** | Дата релиза **15.03.2023**
+Версия релиза **1.4.2** | Дата релиза **5.04.2023**
 
 > Минимальные требования:
 >
@@ -27,7 +27,7 @@ platform :ios, '12.0'
 target 'Sample' do
     use_frameworks!
     
-    pod 'YabbiAdsMediation' # Это плагин YabbiAds SDK
+    pod 'YabbiAdsMediation', '1.4.0' # Это плагин YabbiAds SDK
 end
 ```
 
@@ -38,8 +38,8 @@ platform :ios, '12.0'
 target 'Sample' do
     use_frameworks!
     
-    pod 'YBIYandexAdapter' # Это рекламная сеть Yandex
-    pod 'YBIMintegralAdapter' # Это рекламная сеть Mintegral
+    pod 'YBIYandexAdapter', '1.0.2' # Это рекламная сеть Yandex
+    pod 'YBIMintegralAdapter', '1.0.2' # Это рекламная сеть Mintegral
 end
 ```
 
