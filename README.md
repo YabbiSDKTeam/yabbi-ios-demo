@@ -2,7 +2,7 @@
 
 ## Руководство по Интеграции
 
-Версия релиза **1.4.3** | Дата релиза **5.04.2023**
+Версия релиза **1.4.4** | Дата релиза **5.04.2023**
 
 > Минимальные требования:
 >
@@ -27,7 +27,7 @@ platform :ios, '12.0'
 target 'Sample' do
     use_frameworks!
     
-    pod 'YabbiAdsMediation', '1.4.3' # Это плагин YabbiAds SDK
+    pod 'YabbiAdsMediation', '1.4.4' # Это плагин YabbiAds SDK
 end
 ```
 
