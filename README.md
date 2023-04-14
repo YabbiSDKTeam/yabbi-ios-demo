@@ -103,13 +103,15 @@ YabbiAds.setUserConsent(true)
 ```
 
 ### AppStore ID
-Для эффективного таргетирования рекламных предложений SDK собирает уникальный ID приложения из AppStore.
+Для эффективного таргетирования рекламных предложений SDK собирает уникальный числовой ID приложения из AppStore.
 
 Он определяется автоматически, но в некоторых случаях система может не найти приложение в AppStore.
 
 Вы можете добавить ID приложения вручную. 
 
-В [AppStore Connect](https://appstoreconnect.apple.com/) ID находится в секции "Общая информация" -> "Информация о приложении".
+В [AppStore Connect](https://appstoreconnect.apple.com/) ID находится в секции "Общая информация" -> "Информация о приложении". 
+
+> Пример ID: `1235138391`.
 
 ```swift
 YabbiAds.setCustomParams(YBIAdaptersParameters.AppStoreAppID, "замените_на_свой_id")
