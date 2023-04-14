@@ -34,8 +34,8 @@ PODS:
     - MintegralAdSDK/NativeAd
   - MintegralAdSDK/RewardVideoAd (7.2.9):
     - MintegralAdSDK/NativeAd
-  - YabbiAds (1.4.2)
-  - YabbiAdsMediation (1.4.2):
+  - YabbiAds (1.4.3)
+  - YabbiAdsMediation (1.4.3):
     - YabbiAds
     - YBIMintegralAdapter
     - YBIYandexAdapter
@@ -63,7 +63,7 @@ PODS:
     - YandexMobileAdsInstream (~> 0.12.0)
 
 DEPENDENCIES:
-  - YabbiAdsMediation (= 1.4.2)
+  - YabbiAdsMediation (= 1.4.3)
   - YBIConsentManager
 
 SPEC REPOS:
@@ -80,8 +80,8 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   MintegralAdSDK: 99472d5f3a76d9c4223098172e0d4eb3851af833
-  YabbiAds: 16d057160f11ce0379b4376f0b1330d8a5847936
-  YabbiAdsMediation: 13191696782ed80c18b3232a8d69240492a7fa4a
+  YabbiAds: 6aa12c93a075c27d30a4b23ba1687468a4344d87
+  YabbiAdsMediation: 25cbccca6b2575e2f7e1288d9ad99c7b84bbe9e4
   YandexMobileAds: 3d7708df615f92815a3acedf9869da46d0b4d65e
   YandexMobileAdsInstream: 9af68b07d930a9d16b343838ebffe6605ef086a2
   YandexMobileMetrica: 7dafc7d224077d4443ab3a587b82b24e9b6cc9c7
@@ -89,6 +89,6 @@ SPEC CHECKSUMS:
   YBIMintegralAdapter: a9ff280498cffeb386e5be42a3dda578f217de4f
   YBIYandexAdapter: 4c558ec157c3cb0b52c47491c26dc01b9b7cde1b
 
-PODFILE CHECKSUM: 54f0b9a97ecc64faa9605bafaa44bb951e6747d0
+PODFILE CHECKSUM: 4d29550ee3044e3f09e27d0ed64b4e50f6768887
 
 COCOAPODS: 1.12.0
