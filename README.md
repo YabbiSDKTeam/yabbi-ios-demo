@@ -2,7 +2,7 @@
 
 ## Руководство по Интеграции
 
-Версия релиза **1.4.4** | Дата релиза **14.04.2023**
+Версия релиза **1.5.0** | Дата релиза **18.04.2023**
 
 > Минимальные требования:
 >
@@ -27,7 +27,7 @@ platform :ios, '12.0'
 target 'Sample' do
     use_frameworks!
     
-    pod 'YabbiAdsMediation', '1.4.4' # Это плагин YabbiAds SDK
+    pod 'YabbiAdsMediation', '1.5.0' # Это плагин YabbiAds SDK
 end
 ```
 
@@ -39,6 +39,7 @@ target 'Sample' do
     use_frameworks!
     
     pod 'YBIYandexAdapter', '1.0.2' # Это рекламная сеть Yandex
+    pod 'YBIIronSourceAdapter', '1.0.0' # Это рекламная сеть Mintegral
     pod 'YBIMintegralAdapter', '1.0.2' # Это рекламная сеть Mintegral
 end
 ```
@@ -133,6 +134,15 @@ YabbiAds.setCustomParams(YBIAdaptersParameters.mintegralApiKey, "заменит�
 // Установите для показа полноэкранной рекламы Mintegral
 YabbiAds.setCustomParams(YBIAdaptersParameters.mintegralInterstitialPlacementId, "замените_на_свой_id")
 YabbiAds.setCustomParams(YBIAdaptersParameters.mintegralInterstitialUnitId, "замените_на_свой_id")
+
+// Установите для показа рекламы от IronSource
+YabbiAds.setCustomParams(YBIAdaptersParameters.ironSourceAppID, "замените_на_свой_id")
+
+// Установите для показа полноэкранной рекламы IronSource
+YabbiAds.setCustomParams(YBIAdaptersParameters.ironSourceInterstitialPlacementID, "замените_на_свой_id")
+
+// Установите для показа полноэкранной рекламы с вознаграждением IronSource
+YabbiAds.setCustomParams(YBIAdaptersParameters.ironSourceRewardedPlacementID, "замените_на_свой_id")
 ```
 > Используйте метод `setCustomParams` до вызова метода `initialize`.
 

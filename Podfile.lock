@@ -1,4 +1,5 @@
 PODS:
+  - IronSourceSDK (7.3.0.0)
   - MintegralAdSDK (7.2.9):
     - MintegralAdSDK/BannerAd (= 7.2.9)
     - MintegralAdSDK/BidBannerAd (= 7.2.9)
@@ -34,9 +35,10 @@ PODS:
     - MintegralAdSDK/NativeAd
   - MintegralAdSDK/RewardVideoAd (7.2.9):
     - MintegralAdSDK/NativeAd
-  - YabbiAds (1.4.3)
-  - YabbiAdsMediation (1.4.3):
+  - YabbiAds (1.5.0)
+  - YabbiAdsMediation (1.5.0):
     - YabbiAds
+    - YBIIronSourceAdapter
     - YBIMintegralAdapter
     - YBIYandexAdapter
   - YandexMobileAds (5.2.1):
@@ -54,6 +56,9 @@ PODS:
   - YandexMobileMetrica/Static/Crashes (4.5.0):
     - YandexMobileMetrica/Static/Core
   - YBIConsentManager (1.0.2)
+  - YBIIronSourceAdapter (1.0.0):
+    - IronSourceSDK (~> 7.3.0.0)
+    - YabbiAds
   - YBIMintegralAdapter (1.0.2):
     - MintegralAdSDK (~> 7.2.6)
     - YabbiAds
@@ -63,11 +68,12 @@ PODS:
     - YandexMobileAdsInstream (~> 0.12.0)
 
 DEPENDENCIES:
-  - YabbiAdsMediation (= 1.4.3)
+  - YabbiAdsMediation (= 1.5.0)
   - YBIConsentManager
 
 SPEC REPOS:
   trunk:
+    - IronSourceSDK
     - MintegralAdSDK
     - YabbiAds
     - YabbiAdsMediation
@@ -75,20 +81,23 @@ SPEC REPOS:
     - YandexMobileAdsInstream
     - YandexMobileMetrica
     - YBIConsentManager
+    - YBIIronSourceAdapter
     - YBIMintegralAdapter
     - YBIYandexAdapter
 
 SPEC CHECKSUMS:
+  IronSourceSDK: 70d098472ea63fa8d58e47ad79ad761ad256ce15
   MintegralAdSDK: 99472d5f3a76d9c4223098172e0d4eb3851af833
-  YabbiAds: 6aa12c93a075c27d30a4b23ba1687468a4344d87
-  YabbiAdsMediation: 25cbccca6b2575e2f7e1288d9ad99c7b84bbe9e4
+  YabbiAds: 1dffb49471e1fa802aada666578d3399c21f8d80
+  YabbiAdsMediation: b0218a797ee4888e269da16f86b42beabc9d8bd3
   YandexMobileAds: 3d7708df615f92815a3acedf9869da46d0b4d65e
   YandexMobileAdsInstream: 9af68b07d930a9d16b343838ebffe6605ef086a2
   YandexMobileMetrica: 7dafc7d224077d4443ab3a587b82b24e9b6cc9c7
   YBIConsentManager: e6f83ca261140d0c8f6a24ddc6e67c2910e6a01f
+  YBIIronSourceAdapter: a02000fa6973ca866ecfb94713a3ccf48f14a23b
   YBIMintegralAdapter: a9ff280498cffeb386e5be42a3dda578f217de4f
   YBIYandexAdapter: 4c558ec157c3cb0b52c47491c26dc01b9b7cde1b
 
-PODFILE CHECKSUM: 4d29550ee3044e3f09e27d0ed64b4e50f6768887
+PODFILE CHECKSUM: 58cb2b395a48576462eef95bfde02bb9ef965aa1
 
 COCOAPODS: 1.12.0
