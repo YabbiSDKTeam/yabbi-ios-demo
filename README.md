@@ -187,6 +187,12 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
     
     YabbiAds.setCustomParams(YBIAdaptersParameters.mintegralRewardedPlacementId, "замените_на_свой_id")
     YabbiAds.setCustomParams(YBIAdaptersParameters.mintegralRewardedUnitId, "замените_на_свой_id")
+    
+    YabbiAds.setCustomParams(YBIAdaptersParameters.ironSourceAppID, "замените_на_свой_id")
+
+    YabbiAds.setCustomParams(YBIAdaptersParameters.ironSourceInterstitialPlacementID, "замените_на_свой_id")
+
+    YabbiAds.setCustomParams(YBIAdaptersParameters.ironSourceRewardedPlacementID, "замените_на_свой_id")
 
     let configuration = YabbiConfiguration(
         publisherID: "publisher_id",
