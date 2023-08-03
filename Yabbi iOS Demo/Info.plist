@@ -2,12 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>App needs your location for analytics and advertising purposes.</string>
-	<key>NSUserTrackingUsageDescription</key>
-	<string>App needs your advertising identifier to provide personalised advertising experience tailored to you.</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>App needs your location for analytics and advertising purposes.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UILaunchStoryboardName</key>

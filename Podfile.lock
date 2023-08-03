@@ -1,103 +1,20 @@
 PODS:
-  - IronSourceSDK (7.3.0.0)
-  - MintegralAdSDK (7.2.9):
-    - MintegralAdSDK/BannerAd (= 7.2.9)
-    - MintegralAdSDK/BidBannerAd (= 7.2.9)
-    - MintegralAdSDK/BidInterstitialVideoAd (= 7.2.9)
-    - MintegralAdSDK/BidNativeAd (= 7.2.9)
-    - MintegralAdSDK/BidNewInterstitialAd (= 7.2.9)
-    - MintegralAdSDK/BidRewardVideoAd (= 7.2.9)
-    - MintegralAdSDK/InterstitialVideoAd (= 7.2.9)
-    - MintegralAdSDK/NativeAd (= 7.2.9)
-    - MintegralAdSDK/NewInterstitialAd (= 7.2.9)
-    - MintegralAdSDK/RewardVideoAd (= 7.2.9)
-  - MintegralAdSDK/BannerAd (7.2.9):
-    - MintegralAdSDK/NativeAd
-  - MintegralAdSDK/BidBannerAd (7.2.9):
-    - MintegralAdSDK/BannerAd
-    - MintegralAdSDK/BidNativeAd
-  - MintegralAdSDK/BidInterstitialVideoAd (7.2.9):
-    - MintegralAdSDK/BidNativeAd
-    - MintegralAdSDK/InterstitialVideoAd
-  - MintegralAdSDK/BidNativeAd (7.2.9):
-    - MintegralAdSDK/NativeAd
-  - MintegralAdSDK/BidNewInterstitialAd (7.2.9):
-    - MintegralAdSDK/BidNativeAd
-    - MintegralAdSDK/NewInterstitialAd
-  - MintegralAdSDK/BidRewardVideoAd (7.2.9):
-    - MintegralAdSDK/BidNativeAd
-    - MintegralAdSDK/RewardVideoAd
-  - MintegralAdSDK/InterstitialVideoAd (7.2.9):
-    - MintegralAdSDK/NativeAd
-  - MintegralAdSDK/NativeAd (7.2.9)
-  - MintegralAdSDK/NewInterstitialAd (7.2.9):
-    - MintegralAdSDK/InterstitialVideoAd
-    - MintegralAdSDK/NativeAd
-  - MintegralAdSDK/RewardVideoAd (7.2.9):
-    - MintegralAdSDK/NativeAd
-  - YabbiAds (1.5.0)
-  - YabbiAdsMediation (1.5.0):
-    - YabbiAds
-    - YBIIronSourceAdapter
-    - YBIMintegralAdapter
-    - YBIYandexAdapter
-  - YandexMobileAds (5.2.1):
-    - YandexMobileAds/Static (= 5.2.1)
-  - YandexMobileAds/Static (5.2.1):
-    - YandexMobileMetrica (< 5.0.0, >= 4.0.0)
-  - YandexMobileAdsInstream (0.12.0):
-    - YandexMobileAds (~> 5.2.0)
-  - YandexMobileMetrica (4.5.0):
-    - YandexMobileMetrica/Static (= 4.5.0)
-  - YandexMobileMetrica/Static (4.5.0):
-    - YandexMobileMetrica/Static/Core (= 4.5.0)
-    - YandexMobileMetrica/Static/Crashes (= 4.5.0)
-  - YandexMobileMetrica/Static/Core (4.5.0)
-  - YandexMobileMetrica/Static/Crashes (4.5.0):
-    - YandexMobileMetrica/Static/Core
-  - YBIConsentManager (1.0.2)
-  - YBIIronSourceAdapter (1.0.0):
-    - IronSourceSDK (~> 7.3.0.0)
-    - YabbiAds
-  - YBIMintegralAdapter (1.0.2):
-    - MintegralAdSDK (~> 7.2.6)
-    - YabbiAds
-  - YBIYandexAdapter (1.0.2):
-    - YabbiAds
-    - YandexMobileAds (~> 5.2.0)
-    - YandexMobileAdsInstream (~> 0.12.0)
+  - YabbiAds (1.6.0)
+  - YBIConsentManager (1.0.3)
 
 DEPENDENCIES:
-  - YabbiAdsMediation (= 1.5.0)
+  - YabbiAds (= 1.6.0)
   - YBIConsentManager
 
 SPEC REPOS:
   trunk:
-    - IronSourceSDK
-    - MintegralAdSDK
     - YabbiAds
-    - YabbiAdsMediation
-    - YandexMobileAds
-    - YandexMobileAdsInstream
-    - YandexMobileMetrica
     - YBIConsentManager
-    - YBIIronSourceAdapter
-    - YBIMintegralAdapter
-    - YBIYandexAdapter
 
 SPEC CHECKSUMS:
-  IronSourceSDK: 70d098472ea63fa8d58e47ad79ad761ad256ce15
-  MintegralAdSDK: 99472d5f3a76d9c4223098172e0d4eb3851af833
-  YabbiAds: 1dffb49471e1fa802aada666578d3399c21f8d80
-  YabbiAdsMediation: b0218a797ee4888e269da16f86b42beabc9d8bd3
-  YandexMobileAds: 3d7708df615f92815a3acedf9869da46d0b4d65e
-  YandexMobileAdsInstream: 9af68b07d930a9d16b343838ebffe6605ef086a2
-  YandexMobileMetrica: 7dafc7d224077d4443ab3a587b82b24e9b6cc9c7
-  YBIConsentManager: e6f83ca261140d0c8f6a24ddc6e67c2910e6a01f
-  YBIIronSourceAdapter: a02000fa6973ca866ecfb94713a3ccf48f14a23b
-  YBIMintegralAdapter: a9ff280498cffeb386e5be42a3dda578f217de4f
-  YBIYandexAdapter: 4c558ec157c3cb0b52c47491c26dc01b9b7cde1b
+  YabbiAds: c866f12b5a909df112f6382b356c15760654e429
+  YBIConsentManager: 07702de29c8ae86906a34fa497083b792dc06100
 
-PODFILE CHECKSUM: 58cb2b395a48576462eef95bfde02bb9ef965aa1
+PODFILE CHECKSUM: 75ac9971f33f14e42dd638a6b06870478f2f8040
 
-COCOAPODS: 1.12.0
+COCOAPODS: 1.12.1

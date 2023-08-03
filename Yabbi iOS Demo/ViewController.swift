@@ -9,23 +9,23 @@ class ViewController: UIViewController  {
     @IBOutlet weak var Logger: UILabel!
     
     @IBAction func loadInterstitialAd(_ sender: Any) {
-        YabbiAds.loadAd(AdType.INTERSTITIAL)
+        YabbiAds.loadAd(YabbiAds.INTERSTITIAL)
     }
     @IBAction func showInterstitialAd(_ sender: Any) {
-        YabbiAds.showAd(AdType.INTERSTITIAL, self)
+        YabbiAds.showAd(YabbiAds.INTERSTITIAL, self)
     }
     @IBAction func destroyInterstitialAd(_ sender: Any) {
-        YabbiAds.destroyAd(AdType.INTERSTITIAL)
+        YabbiAds.destroyAd(YabbiAds.INTERSTITIAL)
     }
     
     @IBAction func loadRewardedAd(_ sender: Any) {
-        YabbiAds.loadAd(AdType.REWARDED)
+        YabbiAds.loadAd(YabbiAds.REWARDED)
     }
     @IBAction func showRewardedAd(_ sender: Any) {
-        YabbiAds.showAd(AdType.REWARDED, self)
+        YabbiAds.showAd(YabbiAds.REWARDED, self)
     }
     @IBAction func destroyRewardedAd(_ sender: Any) {
-        YabbiAds.destroyAd(AdType.REWARDED)
+        YabbiAds.destroyAd(YabbiAds.REWARDED)
     }
     
     @IBAction func showConsent(_ sender: Any) {
@@ -45,15 +45,15 @@ class ViewController: UIViewController  {
         
         guard let filePath = Bundle.main.path(forResource: "Env", ofType: "plist"),
               let plist = NSDictionary(contentsOfFile: filePath) else {
-            logEvent("Env.plist not found. See instruction in DEMO_APP_INSTALLATION.md.");
+            logEvent("Env.plist not found. See instruction https://mobileadx.gitbook.io/mobileadx/mobileadx/dokumentaciya-na-russkom/ios-sdk/ustanovka-demo-prilozheniya");
             return
         }
         
         let YABBI_PUBLISHER_ID = getKeyFromPlist(plist, "YABBI_PUBLISHER_ID")
         let YABBI_INTERSTITIAL_ID = getKeyFromPlist(plist, "YABBI_INTERSTITIAL_ID")
         let YABBI_REWARDED_ID = getKeyFromPlist(plist, "YABBI_REWARDED_ID")
-        let YANDEX_INTERSTITIAL_ID = getKeyFromPlist(plist, "YANDEX_INTERSTITIAL_ID")
-        let YANDEX_REWARDED_ID = getKeyFromPlist(plist, "YANDEX_REWARDED_ID")
+        
+
         let MINTEGRAL_APP_ID = getKeyFromPlist(plist, "MINTEGRAL_APP_ID")
         let MINTEGRAL_API_KEY = getKeyFromPlist(plist, "MINTEGRAL_API_KEY")
         let MINTEGRAL_INTERSTITIAL_PLACEMENT_ID = getKeyFromPlist(plist, "MINTEGRAL_INTERSTITIAL_PLACEMENT_ID")
@@ -61,9 +61,7 @@ class ViewController: UIViewController  {
         let MINTEGRAL_REWARDED_PLACEMENT_ID = getKeyFromPlist(plist, "MINTEGRAL_REWARDED_PLACEMENT_ID")
         let MINTEGRAL_REWARDED_ID = getKeyFromPlist(plist, "MINTEGRAL_REWARDED_ID")
         
-        YabbiAds.setCustomParams(YBIAdaptersParameters.yandexInterstitialID, YANDEX_INTERSTITIAL_ID)
-        YabbiAds.setCustomParams(YBIAdaptersParameters.yandexRewardedID, YANDEX_REWARDED_ID)
-        
+
         YabbiAds.setCustomParams(YBIAdaptersParameters.mintegralAppID, MINTEGRAL_APP_ID)
         YabbiAds.setCustomParams(YBIAdaptersParameters.mintegralApiKey, MINTEGRAL_API_KEY)
         YabbiAds.setCustomParams(YBIAdaptersParameters.mintegralInterstitialPlacementId, MINTEGRAL_INTERSTITIAL_PLACEMENT_ID)
