@@ -1,5 +1,4 @@
 import UIKit
-import YBIConsentManager
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
