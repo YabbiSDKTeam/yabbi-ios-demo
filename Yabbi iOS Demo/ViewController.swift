@@ -49,6 +49,8 @@ class ViewController: UIViewController  {
             return
         }
         
+        let APPSTORE_ID = getKeyFromPlist(plist, "APPSTORE_ID")
+        
         let YABBI_PUBLISHER_ID = getKeyFromPlist(plist, "YABBI_PUBLISHER_ID")
         let YABBI_INTERSTITIAL_ID = getKeyFromPlist(plist, "YABBI_INTERSTITIAL_ID")
         let YABBI_REWARDED_ID = getKeyFromPlist(plist, "YABBI_REWARDED_ID")
@@ -61,13 +63,16 @@ class ViewController: UIViewController  {
         let MINTEGRAL_REWARDED_PLACEMENT_ID = getKeyFromPlist(plist, "MINTEGRAL_REWARDED_PLACEMENT_ID")
         let MINTEGRAL_REWARDED_ID = getKeyFromPlist(plist, "MINTEGRAL_REWARDED_ID")
         
+        
+        YabbiAds.setCustomParams(ExternalInfoStrings.appStoreAppID, APPSTORE_ID)
 
-        YabbiAds.setCustomParams(YBIAdaptersParameters.mintegralAppID, MINTEGRAL_APP_ID)
-        YabbiAds.setCustomParams(YBIAdaptersParameters.mintegralApiKey, MINTEGRAL_API_KEY)
-        YabbiAds.setCustomParams(YBIAdaptersParameters.mintegralInterstitialPlacementId, MINTEGRAL_INTERSTITIAL_PLACEMENT_ID)
-        YabbiAds.setCustomParams(YBIAdaptersParameters.mintegralInterstitialUnitId, MINTEGRAL_INTERSTITIAL_ID)
-        YabbiAds.setCustomParams(YBIAdaptersParameters.mintegralRewardedPlacementId, MINTEGRAL_REWARDED_PLACEMENT_ID)
-        YabbiAds.setCustomParams(YBIAdaptersParameters.mintegralRewardedUnitId, MINTEGRAL_REWARDED_ID)
+        
+        YabbiAds.setCustomParams(ExternalInfoStrings.mintegralAppID, MINTEGRAL_APP_ID)
+        YabbiAds.setCustomParams(ExternalInfoStrings.mintegralApiKey, MINTEGRAL_API_KEY)
+        YabbiAds.setCustomParams(ExternalInfoStrings.mintegralInterstitialPlacementId, MINTEGRAL_INTERSTITIAL_PLACEMENT_ID)
+        YabbiAds.setCustomParams(ExternalInfoStrings.mintegralInterstitialUnitId, MINTEGRAL_INTERSTITIAL_ID)
+        YabbiAds.setCustomParams(ExternalInfoStrings.mintegralRewardedPlacementId, MINTEGRAL_REWARDED_PLACEMENT_ID)
+        YabbiAds.setCustomParams(ExternalInfoStrings.mintegralRewardedUnitId, MINTEGRAL_REWARDED_ID)
         
         let config = YabbiConfiguration(
             publisherID: YABBI_PUBLISHER_ID,

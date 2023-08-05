@@ -2,7 +2,7 @@
 
 ## Руководство по Интеграции
 
-Версия релиза **1.5.0** | Дата релиза **18.04.2023**
+Версия релиза **1.6.0** | Дата релиза **5.08.2023**
 
 > Минимальные требования:
 >
@@ -27,7 +27,7 @@ platform :ios, '12.0'
 target 'Sample' do
     use_frameworks!
     
-    pod 'YabbiAdsMediation', '1.5.0' # Это плагин YabbiAds SDK
+    pod 'YabbiAdsMediation', '1.6.0' # Это плагин YabbiAds SDK
 end
 ```
 
@@ -38,9 +38,9 @@ platform :ios, '12.0'
 target 'Sample' do
     use_frameworks!
     
-    pod 'YBIYandexAdapter', '1.0.2' # Это рекламная сеть Yandex
-    pod 'YBIIronSourceAdapter', '1.0.0' # Это рекламная сеть Mintegral
-    pod 'YBIMintegralAdapter', '1.0.2' # Это рекламная сеть Mintegral
+    pod 'YBIYandexAdapter', '1.1.1' # Это рекламная сеть Yandex
+    pod 'YBIIronSourceAdapter', '1.1.1' # Это рекламная сеть Mintegral
+    pod 'YBIMintegralAdapter', '1.1.1' # Это рекламная сеть Mintegral
 end
 ```
 
@@ -115,34 +115,38 @@ YabbiAds.setUserConsent(true)
 > Пример ID: `1235138391`.
 
 ```swift
-YabbiAds.setCustomParams(YBIAdaptersParameters.AppStoreAppID, "замените_на_свой_id")
+YabbiAds.setCustomParams(ExternalInfoStrings.appStoreAppID, "замените_на_свой_id")
 ```
 
 ### Работа сторонних рекламных сетей
 Для работы сторонних рекламных сетей необходимо добавить идентификаторы для каждой рекламной сети.
 ```swift
 // Установите для показа полноэкранной рекламы Яндекса
-YabbiAds.setCustomParams(YBIAdaptersParameters.yandexInterstitialID, "замените_на_свой_id")
+YabbiAds.setCustomParams(ExternalInfoStrings.yandexInterstitialUnitID, "замените_на_свой_id")
 
 // Установите для показа рекламы с вознаграждением Яндекса
-YabbiAds.setCustomParams(YBIAdaptersParameters.yandexInterstitialID, "замените_на_свой_id")
+YabbiAds.setCustomParams(ExternalInfoStrings.yandexRewardedUnitID, "замените_на_свой_id")
     
 // Установите для показа рекламы от Mintegral
-YabbiAds.setCustomParams(YBIAdaptersParameters.mintegralAppID, "замените_на_свой_id")
-YabbiAds.setCustomParams(YBIAdaptersParameters.mintegralApiKey, "замените_на_свой_id")
+YabbiAds.setCustomParams(ExternalInfoStrings.mintegralAppID, "замените_на_свой_id")
+YabbiAds.setCustomParams(ExternalInfoStrings.mintegralApiKey, "замените_на_свой_id")
     
 // Установите для показа полноэкранной рекламы Mintegral
-YabbiAds.setCustomParams(YBIAdaptersParameters.mintegralInterstitialPlacementId, "замените_на_свой_id")
-YabbiAds.setCustomParams(YBIAdaptersParameters.mintegralInterstitialUnitId, "замените_на_свой_id")
+YabbiAds.setCustomParams(ExternalInfoStrings.mintegralInterstitialPlacementId, "замените_на_свой_id")
+YabbiAds.setCustomParams(ExternalInfoStrings.mintegralInterstitialUnitId, "замените_на_свой_id")
+
+// Установите для показа полноэкранной рекламыс вознаграждением Mintegral
+YabbiAds.setCustomParams(ExternalInfoStrings.mintegralRewardedPlacementId, "замените_на_свой_id")
+YabbiAds.setCustomParams(ExternalInfoStrings.mintegralRewardedUnitId, "замените_на_свой_id")
 
 // Установите для показа рекламы от IronSource
-YabbiAds.setCustomParams(YBIAdaptersParameters.ironSourceAppID, "замените_на_свой_id")
+YabbiAds.setCustomParams(ExternalInfoStrings.ironSourceAppID, "замените_на_свой_id")
 
 // Установите для показа полноэкранной рекламы IronSource
-YabbiAds.setCustomParams(YBIAdaptersParameters.ironSourceInterstitialPlacementID, "замените_на_свой_id")
+YabbiAds.setCustomParams(ExternalInfoStrings.ironSourceInterstitialPlacementID, "замените_на_свой_id")
 
 // Установите для показа полноэкранной рекламы с вознаграждением IronSource
-YabbiAds.setCustomParams(YBIAdaptersParameters.ironSourceRewardedPlacementID, "замените_на_свой_id")
+YabbiAds.setCustomParams(ExternalInfoStrings.ironSourceRewardedPlacementID, "замените_на_свой_id")
 ```
 > Используйте метод `setCustomParams` до вызова метода `initialize`.
 
@@ -176,30 +180,35 @@ import YabbiAds
 
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
-    YabbiAds.setCustomParams(YBIAdaptersParameters.yandexInterstitialID, "замените_на_свой_id")
-    YabbiAds.setCustomParams(YBIAdaptersParameters.yandexInterstitialID, "замените_на_свой_id")
+    YabbiAds.setCustomParams(ExternalInfoStrings.yandexInterstitialUnitID, "замените_на_свой_id")
     
-    YabbiAds.setCustomParams(YBIAdaptersParameters.mintegralAppID, "замените_на_свой_id")
-    YabbiAds.setCustomParams(YBIAdaptersParameters.mintegralApiKey, "замените_на_свой_id")
+    YabbiAds.setCustomParams(ExternalInfoStrings.yandexRewardedUnitID, "замените_на_свой_id")
     
-    YabbiAds.setCustomParams(YBIAdaptersParameters.mintegralInterstitialPlacementId, "замените_на_свой_id")
-    YabbiAds.setCustomParams(YBIAdaptersParameters.mintegralInterstitialUnitId, "замените_на_свой_id")
+    YabbiAds.setCustomParams(ExternalInfoStrings.mintegralAppID, "замените_на_свой_id")
+    YabbiAds.setCustomParams(ExternalInfoStrings.mintegralApiKey, "замените_на_свой_id")
     
-    YabbiAds.setCustomParams(YBIAdaptersParameters.mintegralRewardedPlacementId, "замените_на_свой_id")
-    YabbiAds.setCustomParams(YBIAdaptersParameters.mintegralRewardedUnitId, "замените_на_свой_id")
+    YabbiAds.setCustomParams(ExternalInfoStrings.mintegralInterstitialPlacementId, "замените_на_свой_id")
+    YabbiAds.setCustomParams(ExternalInfoStrings.mintegralInterstitialUnitId, "замените_на_свой_id")
     
-    YabbiAds.setCustomParams(YBIAdaptersParameters.ironSourceAppID, "замените_на_свой_id")
+    YabbiAds.setCustomParams(ExternalInfoStrings.mintegralRewardedPlacementId, "замените_на_свой_id")
+    YabbiAds.setCustomParams(ExternalInfoStrings.mintegralRewardedUnitId, "замените_на_свой_id")
 
-    YabbiAds.setCustomParams(YBIAdaptersParameters.ironSourceInterstitialPlacementID, "замените_на_свой_id")
+    YabbiAds.setCustomParams(ExternalInfoStrings.ironSourceAppID, "замените_на_свой_id")
+    
+    YabbiAds.setCustomParams(ExternalInfoStrings.ironSourceInterstitialPlacementID, "замените_на_свой_id")
+    
+    YabbiAds.setCustomParams(ExternalInfoStrings.ironSourceRewardedPlacementID, "замените_на_свой_id")
 
-    YabbiAds.setCustomParams(YBIAdaptersParameters.ironSourceRewardedPlacementID, "замените_на_свой_id")
-
+    YabbiAds.setCustomParams(ExternalInfoStrings.appStoreAppID, "замените_на_свой_id)
+    
     let configuration = YabbiConfiguration(
         publisherID: "publisher_id",
         interstitialID: "interstitial_id",
         rewardedID: "rewarded_id"
     )
 
+    YabbiAds.enableDebug(true)
+    
     YabbiAds.setUserConsent(true)
     
     YabbiAds.initialize(configuration)
