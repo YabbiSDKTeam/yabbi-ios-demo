@@ -83,7 +83,7 @@ PODS:
     - YandexMobileAdsInstream (~> 0.19.0)
 
 DEPENDENCIES:
-  - YabbiAdsMediation
+  - YabbiAdsMediation (= 1.6.0)
   - YBIConsentManager
 
 SPEC REPOS:
@@ -131,6 +131,6 @@ SPEC CHECKSUMS:
   YBIMintegralAdapter: 28bb9d3ebb93df43db54a739c699e70f89bd8042
   YBIYandexAdapter: 70793ea93220b7e22d2310a50058af519074bd46
 
-PODFILE CHECKSUM: 8163789f01a200903e115d0860725860379423b5
+PODFILE CHECKSUM: dcecd5c285f71eb32d4c8f951d0998116e6e060c
 
 COCOAPODS: 1.12.1

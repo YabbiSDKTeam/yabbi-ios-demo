@@ -206,8 +206,6 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
         interstitialID: "interstitial_id",
         rewardedID: "rewarded_id"
     )
-
-    YabbiAds.enableDebug(true)
     
     YabbiAds.setUserConsent(true)
     

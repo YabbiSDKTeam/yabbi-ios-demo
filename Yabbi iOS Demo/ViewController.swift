@@ -55,6 +55,12 @@ class ViewController: UIViewController  {
         let YABBI_INTERSTITIAL_ID = getKeyFromPlist(plist, "YABBI_INTERSTITIAL_ID")
         let YABBI_REWARDED_ID = getKeyFromPlist(plist, "YABBI_REWARDED_ID")
         
+        let YANDEX_INTERSTITIAL_ID = getKeyFromPlist(plist, "YANDEX_INTERSTITIAL_ID")
+        let YANDEX_REWARDED_ID = getKeyFromPlist(plist, "YANDEX_REWARDED_ID")
+        
+        let IRONSOURCE_APP_ID = getKeyFromPlist(plist, "IRONSOURCE_APP_ID")
+        let IRONSOURCE_INTERSTITIAL_ID = getKeyFromPlist(plist, "IRONSOURCE_INTERSTITIAL_ID")
+        let IRONSOURCE_REWARDED_ID = getKeyFromPlist(plist, "IRONSOURCE_REWARDED_ID")
 
         let MINTEGRAL_APP_ID = getKeyFromPlist(plist, "MINTEGRAL_APP_ID")
         let MINTEGRAL_API_KEY = getKeyFromPlist(plist, "MINTEGRAL_API_KEY")
@@ -63,9 +69,14 @@ class ViewController: UIViewController  {
         let MINTEGRAL_REWARDED_PLACEMENT_ID = getKeyFromPlist(plist, "MINTEGRAL_REWARDED_PLACEMENT_ID")
         let MINTEGRAL_REWARDED_ID = getKeyFromPlist(plist, "MINTEGRAL_REWARDED_ID")
         
-        
         YabbiAds.setCustomParams(ExternalInfoStrings.appStoreAppID, APPSTORE_ID)
-
+        
+        YabbiAds.setCustomParams(ExternalInfoStrings.yandexInterstitialUnitID, YANDEX_INTERSTITIAL_ID)
+        YabbiAds.setCustomParams(ExternalInfoStrings.yandexRewardedUnitID, YANDEX_REWARDED_ID)
+        
+        YabbiAds.setCustomParams(ExternalInfoStrings.ironSourceAppID, IRONSOURCE_APP_ID)
+        YabbiAds.setCustomParams(ExternalInfoStrings.ironSourceInterstitialPlacementID, IRONSOURCE_INTERSTITIAL_ID)
+        YabbiAds.setCustomParams(ExternalInfoStrings.ironSourceRewardedPlacementID, IRONSOURCE_REWARDED_ID)
         
         YabbiAds.setCustomParams(ExternalInfoStrings.mintegralAppID, MINTEGRAL_APP_ID)
         YabbiAds.setCustomParams(ExternalInfoStrings.mintegralApiKey, MINTEGRAL_API_KEY)

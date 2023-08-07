@@ -5,6 +5,14 @@
 Добавьте в него следующие ключи:
 
 ```plist
+<key>IRONSOURCE_APP_ID</key>
+<string>вставьте_свой_id</string>
+<key>IRONSOURCE_INTERSTITIAL_ID</key>
+<string>вставьте_свой_id</string>
+<key>IRONSOURCE_REWARDED_ID</key>
+<string>вставьте_свой_id</string>
+<key>APPSTORE_ID</key>
+<string>вставьте_свой_id</string>
 <key>MINTEGRAL_APP_ID</key>
 <string>вставьте_свой_id</string>
 <key>MINTEGRAL_API_KEY</key>
