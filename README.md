@@ -2,7 +2,7 @@
 
 ## Руководство по Интеграции
 
-Версия релиза **1.6.0** | Дата релиза **5.08.2023**
+Версия релиза **2.0.0** | Дата релиза **26.09.2023**
 
 > Минимальные требования:
 >
@@ -27,7 +27,7 @@ platform :ios, '12.0'
 target 'Sample' do
     use_frameworks!
     
-    pod 'YabbiAdsMediation', '1.6.0' # Это плагин YabbiAds SDK
+    pod 'YabbiAdsMediation', '2.0.0' # Это плагин YabbiAds SDK
 end
 ```
 
@@ -38,15 +38,15 @@ platform :ios, '12.0'
 target 'Sample' do
     use_frameworks!
     
-    pod 'YBIYandexAdapter', '1.1.1' # Это рекламная сеть Yandex
-    pod 'YBIIronSourceAdapter', '1.1.1' # Это рекламная сеть Mintegral
-    pod 'YBIMintegralAdapter', '1.1.1' # Это рекламная сеть Mintegral
+    pod 'YBIYandexAdapter', '1.3.0' # Это рекламная сеть Yandex
+    pod 'YBIIronSourceAdapter', '1.3.0' # Это рекламная сеть IronSource
+    pod 'YBIMintegralAdapter', '1.3.0' # Это рекламная сеть Mintegral
 end
 ```
 
 ### Вызов pod install
 
-Запустите в терминале `pod install` , чтобы настроить зависимости CocoaPods или `pod update`, чтобы обновить их. Если у вас нет загруженных Pod’ов, для того, чтобы упростить управление зависимостями, вам нужно установить Cocoapods, следуя  этой [инструкции](https://guides.cocoapods.org/using/gettingInfo.plist-started.html#toc_3).
+Запустите в терминале `pod install` , чтобы настроить зависимости CocoaPods или `pod update`, чтобы обновить их. Если у вас нет загруженных Pod’ов, для того, чтобы упростить управление зависимостями, вам нужно установить Cocoapods, следуя  этой [инструкции](https://guides.cocoapods.org/using/getting-started.html#installation).
 
 ```bash
 sudo gem install cocoapods
@@ -58,13 +58,6 @@ sudo gem install cocoapods
 rm -rf "${HOME}/Library/Caches/CocoaPods"
 rm -rf "`pwd`/Pods/"
 pod update
-```
-
-Если официальный репозиторий не отвечает, вы можете обновить Pod’ы c помощью зеркального репозитория YabbiAds, добавив следующий код:
-
-```ruby
-source 'https://github.com/YabbiSDKTeam/CocoaPods'
-source 'https://cdn.cocoapods.org/'
 ```
 
 ### Поддержка SKAdNetwork
@@ -153,23 +146,10 @@ YabbiAds.setCustomParams(ExternalInfoStrings.ironSourceRewardedPlacementID, "з�
 ### Инициализация
 Теперь `YabbiAds` готова к инициализации. Используйте код ниже, чтобы SDK заработал в вашем проекте.
 ```swift
-let configuration = YabbiConfiguration(
-    publisherID: "publisher_id",
-    interstitialID: "interstitial_id",
-    rewardedID: "rewarded_id"
-)
-        
-YabbiAds.initialize(configuration)
+YabbiAds.initialize("publisher_id")
 ```
 
-* `publisher_id` - идентификатор издателя. Обязателен для заполнения.
-* `interstitial_id` - идентификатор полноэкранной рекламы. Может оставаться пустой строкой.
-* `rewarded_id` - идентификатор полноэкранной рекламы с вознаграждением. Может оставаться пустой строкой.
-
-
-1. Замените `publisher_id` на идентификатор издателя из [личного кабинета](https://mobileadx.ru/settings).
-2. Замените `interstitial_id` на ключ соответствующий баннерной рекламе из [личного кабинета](https://mobileadx.ru).
-3. Замените `rewarded_id` на ключ соответствующий видео с вознаграждением из [личного кабинета](https://mobileadx.ru).
+Замените `publisher_id` на идентификатор издателя из [личного кабинета](https://mobileadx.ru/settings).
 
 Ниже представлен полный код.
 
@@ -201,15 +181,9 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 
     YabbiAds.setCustomParams(ExternalInfoStrings.appStoreAppID, "замените_на_свой_id)
     
-    let configuration = YabbiConfiguration(
-        publisherID: "publisher_id",
-        interstitialID: "interstitial_id",
-        rewardedID: "rewarded_id"
-    )
-    
     YabbiAds.setUserConsent(true)
+    YabbiAds.initialize("publisher_id")
     
-    YabbiAds.initialize(configuration)
     return true
 }
 ```

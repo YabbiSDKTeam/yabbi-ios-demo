@@ -138,7 +138,7 @@ extension ViewController:YbiRewardedDelegate {
         logEvent("onRewardedVideolLoaded")
     }
     
-    func onRewardedLoadFailed(_ error: String) {
+    func onRewardedLoadFailed(_ error: AdException) {
         logEvent("oRewardedVideoLoadFailed: \(error)")
     }
     
@@ -146,7 +146,7 @@ extension ViewController:YbiRewardedDelegate {
         logEvent("onRewardedVideoShown")
     }
     
-    func onRewardedShowFailed(_ error: String) {
+    func onRewardedShowFailed(_ error: AdException) {
         logEvent("onRewardedVideoShowFailed: \(error)")
     }
     
@@ -165,7 +165,7 @@ extension ViewController: YbiInterstitialDelegate{
         logEvent("onInterstitialLoaded")
     }
     
-    func onInterstitialLoadFailed(_ error: String) {
+    func onInterstitialLoadFailed(_ error: AdException) {
         logEvent("onInterstitialLoadFailed: \(error)")
     }
     
@@ -173,7 +173,7 @@ extension ViewController: YbiInterstitialDelegate{
         logEvent("onInterstitialShown")
     }
     
-    func onInterstitialShowFailed(_ error: String) {
+    func onInterstitialShowFailed(_ error: AdException) {
         logEvent("onInterstitialShowFailed: \(error)")
     }
     
