@@ -1,32 +1,32 @@
-# Адаптер Yabbi для AppLovin
+# Адаптер YabbiAds для AppLovin
 
-## Шаг 1. Установка SDK
+## Руководство по Интеграции
 
-### 1.1 Настройка Podfile
+Версия релиза **1.1.0** | Дата релиза **10.10.2023**
+
+> Минимальные требования:
+>
+>* iOS 12.0 или выше.
+>* Используйте XCode 13 и выше.
+
+## Установка SDK
+
+### Настройка Podfile
 >
 >Минимально необходимая версия CocoaPods 1.10.0 или выше. Более подробную информацию об обновлении CocoaPods вы можете найти по [ссылке](https://guides.cocoapods.org/using/getting-started.html).
 
-Вставьте следующий код в свой **Podfile** проекта.
+Вставьте следующий код в свой `Podfile` проекта.
  ```ruby
 platform :ios, '12.0'
 
 target 'Sample' do
     use_frameworks!
 
-    pod 'AppLovinMediationYabbiAdsCustomAdapter'
-end
-
-# Добавьте следующий код при возникновении ошибки Symbol not found
-post_install do |installer|
-    installer.pods_project.targets.each do |target|
-        target.build_configurations.each do |config|
-            config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
-        end
-    end
+    pod 'AppLovinMediationYabbiAdsCustomAdapter' # Это рекламная сеть ябби
 end
 ```
 
-### 1.2 Вызов pod install
+### Вызов pod install
 
 Запустите в терминале `pod install` , чтобы настроить зависимости CocoaPods или `pod update`, чтобы обновить их. Если у вас нет загруженных Pod’ов, для того, чтобы упростить управление зависимостями, вам нужно установить Cocoapods, следуя  этой [инструкции](https://guides.cocoapods.org/using/gettingInfo.plist-started.html#toc_3).
 
@@ -42,74 +42,26 @@ rm -rf "`pwd`/Pods/"
 pod update
 ```
 
-Если официальный репозиторий не отвечает, вы можете обновить Pod’ы c помощью зеркального репозитория YabbiAds, добавив следующий код:
-
-```ruby
-source 'https://github.com/YabbiSDKTeam/CocoaPods'
-source 'https://cdn.cocoapods.org/'
-```
-
 ### Поддержка SKAdNetwork
-**YabbiAds SDK** поддерживает трекинг установок приложений с помощью фреймворка **SKAdNetwork**. Трекинг установок работает для всех устройств, даже если доступ к **IDFA** отсутствует.
+`YabbiAds` поддерживает трекинг установок приложений с помощью фреймворка `SKAdNetwork`. Трекинг установок работает для всех устройств, даже если доступ к `IDFA` отсутствует.
 
-Чтобы включить функциональность, добавьте идентификаторы рекламных сетей в файл **Info.plist** приложения. 
+Чтобы включить функциональность, добавьте идентификаторы рекламных сетей в файл `Info.plist` приложения. 
 
 Список идентификаторов вы можете найти в файле [skadnetworkids.xml](skadnetworkids.xml).
 
-**YabbiAds** поддерживает 2 типа рекламы
-- Полноэкранный баннер
-- Полноэкранный видео баннер с вознаграждением
+## Инициализация SDK
+Инициализируйте **AppLovin**, следуя официальной [документации AppLovin](https://dash.applovin.com/documentation/mediation/ios/getting-started/integration).
 
-## MaxInterstitialAd
-> [Документация AppLovin](https://dash.applovin.com/documentation/mediation/ios/ad-formats/interstitials)
+Для добавления рекламной сети **YabbiAds** следуйте инструкции по добавлению кастомной рекламной сети - [клик](https://dash.applovin.com/documentation/mediation/ios/mediation-setup/custom-sdk).
 
-Для инициализации **YabbiAds** следуйте следующим инструкциям:
+## Типы рекламы
 
-1. Создайте рекламный контейнер **MaxInterstitialAd**, как описано в официальной документации.
-```swift
-var interstitialAd: MAInterstitialAd!
+Вы можете подключить 2 типа рекламы в свое приложение.
 
- interstitialAd = MAInterstitialAd(adUnitIdentifier: "YOUR_AD_UNIT_ID")
-```
-2. Установите параметры **Yabbi** с помощью метода **setExtraParameterForKey**.
-```swift
- // !!! Установите для инициализации SDK
-interstitialAd.setExtraParameterForKey(YBIAdaptersParameters.publisherID, "YOUR_PUBLISHER_ID")
-interstitialAd.setExtraParameterForKey(YBIAdaptersParameters.interstitialID, "YOUR_INTERSTITIAL_ID")
-interstitialAd.setExtraParameterForKey(YBIAdaptersParameters.rewardedID, "YOUR_REWARDED_ID")
-```
-3. Замените **YOUR_PUBLISHER_ID** на ключ издателя из [личного кабинета](https://mobileadx.ru).
-4. Замените **YOUR_INTERSTITIAL_ID** на ключ соответствующий баннерной рекламе из [личного кабинета](https://mobileadx.ru).
-5. Замените **YOUR_REWARDED_ID** на ключ соответствующий видео с вознаграждением из [личного кабинета](https://mobileadx.ru).
+* Полноэкранная реклама - баннер на весь экран, который можно закрыть через несколько секунд.
+* Полноэкранная реклама с вознаграждением - видео, после просмотра которого пользователю можно выдать награду.
 
-6. Реклама **YabbiAds** готова к показу, используйте метод **load**, для загрузки рекламы.
-```swift
-interstitialAd.load()
-```
+Ознакомьтесь с детальной документацией по каждому типу рекламы
 
-## MaxRewardedAd
-- [Документация AppLovin](https://dash.applovin.com/documentation/mediation/ios/ad-formats/rewarded-ads)
-
-Для инициализации **YabbiAds** следуйте следующим инструкциям:
-
-1. Создайте рекламный контейнер **MaxRewardedAd**, как описано в официальной документации.
-```swift
-var rewardedAd: MARewardedAd!
- 
- rewardedAd = MARewardedAd.shared(withAdUnitIdentifier: "YOUR_AD_UNIT_ID")
-```
-2. Установите параметры **Yabbi** с помощью метода **setExtraParameterForKey**.
-```swift
- // !!! Установите для инициализации SDK
-rewardedAd.setExtraParameterForKey(YBIAdaptersParameters.publisherID, "YOUR_PUBLISHER_ID")
-rewardedAd.setExtraParameterForKey(YBIAdaptersParameters.interstitialID, "YOUR_INTERSTITIAL_ID")
-rewardedAd.setExtraParameterForKey(YBIAdaptersParameters.rewardedID, "YOUR_REWARDED_ID")
-```
-3. Замените **YOUR_PUBLISHER_ID** на ключ издателя из [личного кабинета](https://mobileadx.ru).
-4. Замените **YOUR_INTERSTITIAL_ID** на ключ соответствующий баннерной рекламе из [личного кабинета](https://mobileadx.ru).
-5. Замените **YOUR_REWARDED_ID** на ключ соответствующий видео с вознаграждением из [личного кабинета](https://mobileadx.ru).
-
-6. Реклама **YabbiAds** готова к показу, используйте метод **load**, для загрузки рекламы.
-```swift
-rewardedAd.load()
-```
+1. [Полноэкранная реклама](https://dash.applovin.com/documentation/mediation/ios/ad-formats/interstitials)
+2. [Полноэкранная реклама с вознаграждением](https://dash.applovin.com/documentation/mediation/ios/ad-formats/rewarded-ads)
