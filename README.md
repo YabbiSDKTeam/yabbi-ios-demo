@@ -38,7 +38,7 @@ platform :ios, '12.0'
 target 'Sample' do
     use_frameworks!
     
-    pod 'YBIYandexAdapter', '1.3.0' # Это рекламная сеть Yandex
+    pod 'YBIYandexAdapter', '1.4.0' # Это рекламная сеть Yandex
     pod 'YBIIronSourceAdapter', '1.3.0' # Это рекламная сеть IronSource
     pod 'YBIMintegralAdapter', '1.3.0' # Это рекламная сеть Mintegral
 end
