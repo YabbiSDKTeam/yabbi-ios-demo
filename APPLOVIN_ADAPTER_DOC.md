@@ -70,5 +70,5 @@ pod update
 
 Ознакомьтесь с детальной документацией по каждому типу рекламы
 
-1. [Полноэкранная реклама](https://dash.applovin.com/documentation/mediation/android/ad-formats/interstitials)
-2. [Полноэкранная реклама с вознаграждением](https://dash.applovin.com/documentation/mediation/android/ad-formats/rewarded-ads)
+1. [Полноэкранная реклама](https://dash.applovin.com/documentation/mediation/ios/ad-formats/interstitials)
+2. [Полноэкранная реклама с вознаграждением](https://dash.applovin.com/documentation/mediation/ios/ad-formats/rewarded-ads)
