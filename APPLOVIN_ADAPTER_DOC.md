@@ -54,6 +54,13 @@ pod update
 
 Для добавления рекламной сети **YabbiAds** следуйте инструкции по добавлению кастомной рекламной сети - [клик](https://dash.applovin.com/documentation/mediation/ios/mediation-setup/custom-sdk).
 
+Заполните поля следующими параметрами
+* **Network Type** - `SDK`
+* **Custom Network Name** - `YabbiAds`
+* **Android Adapter Class Name** - `me.yabbi.ads.adapters.applovin`
+* **iOS Adapter Class Name** - `AppLovinMediationYabbiAdsCustomAdapter`
+
+
 ## Типы рекламы
 
 Вы можете подключить 2 типа рекламы в свое приложение.
@@ -63,5 +70,5 @@ pod update
 
 Ознакомьтесь с детальной документацией по каждому типу рекламы
 
-1. [Полноэкранная реклама](https://dash.applovin.com/documentation/mediation/ios/ad-formats/interstitials)
-2. [Полноэкранная реклама с вознаграждением](https://dash.applovin.com/documentation/mediation/ios/ad-formats/rewarded-ads)
+1. [Полноэкранная реклама](https://dash.applovin.com/documentation/mediation/android/ad-formats/interstitials)
+2. [Полноэкранная реклама с вознаграждением](https://dash.applovin.com/documentation/mediation/android/ad-formats/rewarded-ads)
