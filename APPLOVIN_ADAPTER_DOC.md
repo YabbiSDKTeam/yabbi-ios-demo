@@ -57,11 +57,14 @@ pod update
 Заполните поля следующими параметрами
 * **Network Type** - `SDK`
 * **Custom Network Name** - `YabbiAds`
-* **Android Adapter Class Name** - `me.yabbi.ads.adapters.applovin`
+* **Android Adapter Class Name** - `com.applovin.mediation.adapters.YabbiMediationAdapter`
 * **iOS Adapter Class Name** - `AppLovinMediationYabbiAdsCustomAdapter`
 
 
 В поле **App ID** указывайте ваш **Publisher ID** из кабинета Yabbi.
+
+## Тестовая реклама
+Установите у адаптера YabbiAds CPM Price 5000$ чтобы увидеть рекламу YabbiAds.
 
 ## Типы рекламы
 
