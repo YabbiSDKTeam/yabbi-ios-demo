@@ -1,136 +1,28 @@
 PODS:
-  - DivKit (24.2.0):
-    - DivKit_Base (= 24.2.0)
-    - DivKit_BaseTiny (= 24.2.0)
-    - DivKit_BaseUI (= 24.2.0)
-    - DivKit_CommonCore (= 24.2.0)
-    - DivKit_LayoutKit (= 24.2.0)
-    - DivKit_LayoutKitInterface (= 24.2.0)
-    - DivKit_Networking (= 24.2.0)
-    - DivKit_Serialization (= 24.2.0)
-  - DivKit_Base (24.2.0):
-    - DivKit_BaseTiny (= 24.2.0)
-    - DivKit_BaseUI (= 24.2.0)
-  - DivKit_BaseTiny (24.2.0)
-  - DivKit_BaseUI (24.2.0):
-    - DivKit_BaseTiny (= 24.2.0)
-  - DivKit_CommonCore (24.2.0):
-    - DivKit_Base (= 24.2.0)
-    - DivKit_BaseTiny (= 24.2.0)
-  - DivKit_LayoutKit (24.2.0):
-    - DivKit_BaseTiny (= 24.2.0)
-    - DivKit_BaseUI (= 24.2.0)
-    - DivKit_CommonCore (= 24.2.0)
-    - DivKit_LayoutKitInterface (= 24.2.0)
-  - DivKit_LayoutKitInterface (24.2.0):
-    - DivKit_Base (= 24.2.0)
-    - DivKit_BaseTiny (= 24.2.0)
-    - DivKit_BaseUI (= 24.2.0)
-  - DivKit_Networking (24.2.0):
-    - DivKit_Base (= 24.2.0)
-  - DivKit_Serialization (24.2.0):
-    - DivKit_CommonCore (= 24.2.0)
-  - IronSourceSDK (7.4.0.0)
-  - MintegralAdSDK/BidNativeAd (7.4.6):
-    - MintegralAdSDK/NativeAd
-  - MintegralAdSDK/BidNewInterstitialAd (7.4.6):
-    - MintegralAdSDK/BidNativeAd
-    - MintegralAdSDK/NewInterstitialAd
-  - MintegralAdSDK/BidRewardVideoAd (7.4.6):
-    - MintegralAdSDK/BidNativeAd
-    - MintegralAdSDK/RewardVideoAd
-  - MintegralAdSDK/InterstitialVideoAd (7.4.6):
-    - MintegralAdSDK/NativeAd
-  - MintegralAdSDK/NativeAd (7.4.6)
-  - MintegralAdSDK/NewInterstitialAd (7.4.6):
-    - MintegralAdSDK/InterstitialVideoAd
-    - MintegralAdSDK/NativeAd
-  - MintegralAdSDK/RewardVideoAd (7.4.6):
-    - MintegralAdSDK/NativeAd
-  - YabbiAds (2.0.0)
-  - YabbiAdsMediation (2.0.0):
-    - YabbiAds
-    - YBIIronSourceAdapter
-    - YBIMintegralAdapter
-    - YBIYandexAdapter
-  - YandexMobileAds (5.9.1):
-    - DivKit (~> 24.2)
-    - YandexMobileAds/Static (= 5.9.1)
-  - YandexMobileAds/Static (5.9.1):
-    - DivKit (~> 24.2)
-    - YandexMobileMetrica (< 5.0.0, >= 4.0.0)
-  - YandexMobileAdsInstream (0.19.0):
-    - YandexMobileAds (~> 5.9.0)
-  - YandexMobileMetrica (4.5.2):
-    - YandexMobileMetrica/Static (= 4.5.2)
-  - YandexMobileMetrica/Static (4.5.2):
-    - YandexMobileMetrica/Static/Core (= 4.5.2)
-    - YandexMobileMetrica/Static/Crashes (= 4.5.2)
-  - YandexMobileMetrica/Static/Core (4.5.2)
-  - YandexMobileMetrica/Static/Crashes (4.5.2):
-    - YandexMobileMetrica/Static/Core
-  - YBIConsentManager (1.0.3)
-  - YBIIronSourceAdapter (1.3.0):
-    - IronSourceSDK (~> 7.4.0.0)
-    - YabbiAds
-  - YBIMintegralAdapter (1.3.0):
-    - MintegralAdSDK/BidNewInterstitialAd
-    - MintegralAdSDK/BidRewardVideoAd
-    - YabbiAds
-  - YBIYandexAdapter (1.3.0):
-    - YabbiAds
-    - YandexMobileAds (~> 5.9.1)
-    - YandexMobileAdsInstream (~> 0.19.0)
+  - SspnetConsentManager (1.0.0)
+  - SspnetCore (1.0.0)
+  - YabbiConsentManager (1.0.0):
+    - SspnetConsentManager
+  - YabbiSDK (1.0.0):
+    - SspnetCore
 
 DEPENDENCIES:
-  - YabbiAdsMediation (= 2.0.0)
-  - YBIConsentManager
+  - YabbiConsentManager
+  - YabbiSDK
 
 SPEC REPOS:
-  trunk:
-    - DivKit
-    - DivKit_Base
-    - DivKit_BaseTiny
-    - DivKit_BaseUI
-    - DivKit_CommonCore
-    - DivKit_LayoutKit
-    - DivKit_LayoutKitInterface
-    - DivKit_Networking
-    - DivKit_Serialization
-    - IronSourceSDK
-    - MintegralAdSDK
-    - YabbiAds
-    - YabbiAdsMediation
-    - YandexMobileAds
-    - YandexMobileAdsInstream
-    - YandexMobileMetrica
-    - YBIConsentManager
-    - YBIIronSourceAdapter
-    - YBIMintegralAdapter
-    - YBIYandexAdapter
+  https://github.com/CocoaPods/Specs.git:
+    - SspnetConsentManager
+    - SspnetCore
+    - YabbiConsentManager
+    - YabbiSDK
 
 SPEC CHECKSUMS:
-  DivKit: f2151bd0bfc67e0b4ad949e8cd1caa7379253bef
-  DivKit_Base: 263499ebc77c217314d4bee1b374781c3643c8a9
-  DivKit_BaseTiny: 42535fa725058957129f231b4b52d394ed4d7ea9
-  DivKit_BaseUI: cb86da6096de4a3bb670b4196ddeed0334acd671
-  DivKit_CommonCore: dd26a3f7dcc9010ec3a4ed3c5c3718e7a882536a
-  DivKit_LayoutKit: cdcfa56dd6a88495703350bb63f410dde426435c
-  DivKit_LayoutKitInterface: f0dae7b2e7a024d0340914490b1c06c0e6a926ae
-  DivKit_Networking: cd028559a160baa76c43fda52174f2f83c87b747
-  DivKit_Serialization: b4d8a4672de9134889c5f92f5f7e04e04112e660
-  IronSourceSDK: 31bf34fdf92756dde41c00d10e3d3344461cbe2e
-  MintegralAdSDK: da38763be211627cc247aee753f00de242f284aa
-  YabbiAds: 8c009fba07e529188155270fc4eab16895f5cdd5
-  YabbiAdsMediation: 3592773361f737c14044db142e9131875e070b43
-  YandexMobileAds: b4c8789fb2cc1540fc16bc94f2c18ce2d031ccc7
-  YandexMobileAdsInstream: b20ddc515fdc924d86d2c2353e5c8b41448e53b0
-  YandexMobileMetrica: f5368ee93f286c793d73b58da00929babfc897c1
-  YBIConsentManager: 07702de29c8ae86906a34fa497083b792dc06100
-  YBIIronSourceAdapter: 778951bb1120ece155f53700e7caa543dd30c1d9
-  YBIMintegralAdapter: f18e30d31991ef43b4401029e57cc6fbe61f1012
-  YBIYandexAdapter: f9ccc378ef58aa764c477ce127530abb59f415ac
+  SspnetConsentManager: 74e3385870933a1b8267b1d74f5c1723b961b500
+  SspnetCore: 9acd0551656642b0ac791c6881990d05d96fae9b
+  YabbiConsentManager: 7f10418513f45a21f26d54015e7b5869c842be85
+  YabbiSDK: 14847bed6cbad7fc6773e8b712b94d54b1c44435
 
-PODFILE CHECKSUM: 543ff5ac8cd0a3f6e78972b04d87d2a38dcd80c3
+PODFILE CHECKSUM: 67f30c9253bc265c92ad4b8b705c2c865ba20b0f
 
 COCOAPODS: 1.13.0

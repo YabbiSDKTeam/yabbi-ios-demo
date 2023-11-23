@@ -1,9 +1,24 @@
-platform :ios, '12.0'
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
 
-source 'https://cdn.cocoapods.org'
+source 'https://github.com/CocoaPods/Specs'
 
-target 'Yabbi iOS Demo' do
+target 'YabbiDemoApp' do
+  # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-  pod 'YabbiAdsMediation', '2.0.1'
-  pod 'YBIConsentManager'
+
+  # Pods for YabbiDemoApp
+  
+  pod 'YabbiSDK'
+  pod 'YabbiConsentManager'
+
+  target 'YabbiDemoAppTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'YabbiDemoAppUITests' do
+    # Pods for testing
+  end
+
 end

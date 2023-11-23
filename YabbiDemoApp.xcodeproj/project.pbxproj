@@ -1,0 +1,796 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3438C45016B88ED945842AA6 /* Pods_YabbiDemoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C73C8381A552D8B5B72C941E /* Pods_YabbiDemoApp.framework */; };
+		744A805A2B0FB43E00A92CA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744A80592B0FB43E00A92CA0 /* AppDelegate.swift */; };
+		744A805E2B0FB43E00A92CA0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744A805D2B0FB43E00A92CA0 /* ViewController.swift */; };
+		744A80612B0FB43E00A92CA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 744A805F2B0FB43E00A92CA0 /* Main.storyboard */; };
+		744A80632B0FB43E00A92CA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 744A80622B0FB43E00A92CA0 /* Assets.xcassets */; };
+		744A80662B0FB43E00A92CA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 744A80642B0FB43E00A92CA0 /* LaunchScreen.storyboard */; };
+		744A80712B0FB43F00A92CA0 /* YabbiDemoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744A80702B0FB43F00A92CA0 /* YabbiDemoAppTests.swift */; };
+		744A807B2B0FB43F00A92CA0 /* YabbiDemoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744A807A2B0FB43F00A92CA0 /* YabbiDemoAppUITests.swift */; };
+		744A807D2B0FB43F00A92CA0 /* YabbiDemoAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744A807C2B0FB43F00A92CA0 /* YabbiDemoAppUITestsLaunchTests.swift */; };
+		744A808A2B0FB51D00A92CA0 /* EnvironmentVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744A80892B0FB51D00A92CA0 /* EnvironmentVariables.swift */; };
+		744A80912B0FB62900A92CA0 /* DeviceInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744A808B2B0FB62900A92CA0 /* DeviceInfoViewController.swift */; };
+		744A80922B0FB62900A92CA0 /* ConsentManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744A808C2B0FB62900A92CA0 /* ConsentManagerViewController.swift */; };
+		744A80932B0FB62900A92CA0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744A808D2B0FB62900A92CA0 /* Extensions.swift */; };
+		744A80942B0FB62900A92CA0 /* InterstitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744A808E2B0FB62900A92CA0 /* InterstitialViewController.swift */; };
+		744A80952B0FB62900A92CA0 /* RewardedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744A808F2B0FB62900A92CA0 /* RewardedViewController.swift */; };
+		744A80962B0FB62900A92CA0 /* MediationNetworks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744A80902B0FB62900A92CA0 /* MediationNetworks.swift */; };
+		A91B7328AE145581D2C2B81A /* Pods_YabbiDemoAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A88B8422B1929CD3E8217EE3 /* Pods_YabbiDemoAppTests.framework */; };
+		CB485E6628CFA066763E55B2 /* Pods_YabbiDemoApp_YabbiDemoAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F29513F07A446E17AB268621 /* Pods_YabbiDemoApp_YabbiDemoAppUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		744A806D2B0FB43F00A92CA0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 744A804E2B0FB43E00A92CA0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 744A80552B0FB43E00A92CA0;
+			remoteInfo = YabbiDemoApp;
+		};
+		744A80772B0FB43F00A92CA0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 744A804E2B0FB43E00A92CA0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 744A80552B0FB43E00A92CA0;
+			remoteInfo = YabbiDemoApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1B88A95A4383B00C4C440667 /* Pods-YabbiDemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YabbiDemoApp.release.xcconfig"; path = "Target Support Files/Pods-YabbiDemoApp/Pods-YabbiDemoApp.release.xcconfig"; sourceTree = "<group>"; };
+		4D131A5F5F39D2EEF6CAE3CA /* Pods-YabbiDemoAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YabbiDemoAppTests.release.xcconfig"; path = "Target Support Files/Pods-YabbiDemoAppTests/Pods-YabbiDemoAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		744A80562B0FB43E00A92CA0 /* YabbiDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YabbiDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		744A80592B0FB43E00A92CA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		744A805D2B0FB43E00A92CA0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		744A80602B0FB43E00A92CA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		744A80622B0FB43E00A92CA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		744A80652B0FB43E00A92CA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		744A80672B0FB43E00A92CA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		744A806C2B0FB43F00A92CA0 /* YabbiDemoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YabbiDemoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		744A80702B0FB43F00A92CA0 /* YabbiDemoAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YabbiDemoAppTests.swift; sourceTree = "<group>"; };
+		744A80762B0FB43F00A92CA0 /* YabbiDemoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YabbiDemoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		744A807A2B0FB43F00A92CA0 /* YabbiDemoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YabbiDemoAppUITests.swift; sourceTree = "<group>"; };
+		744A807C2B0FB43F00A92CA0 /* YabbiDemoAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YabbiDemoAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		744A80892B0FB51D00A92CA0 /* EnvironmentVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentVariables.swift; sourceTree = "<group>"; };
+		744A808B2B0FB62900A92CA0 /* DeviceInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceInfoViewController.swift; sourceTree = "<group>"; };
+		744A808C2B0FB62900A92CA0 /* ConsentManagerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentManagerViewController.swift; sourceTree = "<group>"; };
+		744A808D2B0FB62900A92CA0 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		744A808E2B0FB62900A92CA0 /* InterstitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterstitialViewController.swift; sourceTree = "<group>"; };
+		744A808F2B0FB62900A92CA0 /* RewardedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardedViewController.swift; sourceTree = "<group>"; };
+		744A80902B0FB62900A92CA0 /* MediationNetworks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediationNetworks.swift; sourceTree = "<group>"; };
+		A88B8422B1929CD3E8217EE3 /* Pods_YabbiDemoAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YabbiDemoAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B932C1D27D29B2BE5EE97EAF /* Pods-YabbiDemoApp-YabbiDemoAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YabbiDemoApp-YabbiDemoAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-YabbiDemoApp-YabbiDemoAppUITests/Pods-YabbiDemoApp-YabbiDemoAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C73C8381A552D8B5B72C941E /* Pods_YabbiDemoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YabbiDemoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB2A2FFC3736B3561715A75D /* Pods-YabbiDemoAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YabbiDemoAppTests.debug.xcconfig"; path = "Target Support Files/Pods-YabbiDemoAppTests/Pods-YabbiDemoAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D3DF3556B12166D97C24954E /* Pods-YabbiDemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YabbiDemoApp.debug.xcconfig"; path = "Target Support Files/Pods-YabbiDemoApp/Pods-YabbiDemoApp.debug.xcconfig"; sourceTree = "<group>"; };
+		E56D4725EAF8E39753EBBD37 /* Pods-YabbiDemoApp-YabbiDemoAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YabbiDemoApp-YabbiDemoAppUITests.release.xcconfig"; path = "Target Support Files/Pods-YabbiDemoApp-YabbiDemoAppUITests/Pods-YabbiDemoApp-YabbiDemoAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F29513F07A446E17AB268621 /* Pods_YabbiDemoApp_YabbiDemoAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YabbiDemoApp_YabbiDemoAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		744A80532B0FB43E00A92CA0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3438C45016B88ED945842AA6 /* Pods_YabbiDemoApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		744A80692B0FB43F00A92CA0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A91B7328AE145581D2C2B81A /* Pods_YabbiDemoAppTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		744A80732B0FB43F00A92CA0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB485E6628CFA066763E55B2 /* Pods_YabbiDemoApp_YabbiDemoAppUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		744A804D2B0FB43E00A92CA0 = {
+			isa = PBXGroup;
+			children = (
+				744A80582B0FB43E00A92CA0 /* YabbiDemoApp */,
+				744A806F2B0FB43F00A92CA0 /* YabbiDemoAppTests */,
+				744A80792B0FB43F00A92CA0 /* YabbiDemoAppUITests */,
+				744A80572B0FB43E00A92CA0 /* Products */,
+				C4EFE726087E1569CAC616A2 /* Pods */,
+				F21F7374A268741D87B061F6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		744A80572B0FB43E00A92CA0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				744A80562B0FB43E00A92CA0 /* YabbiDemoApp.app */,
+				744A806C2B0FB43F00A92CA0 /* YabbiDemoAppTests.xctest */,
+				744A80762B0FB43F00A92CA0 /* YabbiDemoAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		744A80582B0FB43E00A92CA0 /* YabbiDemoApp */ = {
+			isa = PBXGroup;
+			children = (
+				744A808C2B0FB62900A92CA0 /* ConsentManagerViewController.swift */,
+				744A808B2B0FB62900A92CA0 /* DeviceInfoViewController.swift */,
+				744A808D2B0FB62900A92CA0 /* Extensions.swift */,
+				744A808E2B0FB62900A92CA0 /* InterstitialViewController.swift */,
+				744A80902B0FB62900A92CA0 /* MediationNetworks.swift */,
+				744A808F2B0FB62900A92CA0 /* RewardedViewController.swift */,
+				744A80592B0FB43E00A92CA0 /* AppDelegate.swift */,
+				744A805D2B0FB43E00A92CA0 /* ViewController.swift */,
+				744A80892B0FB51D00A92CA0 /* EnvironmentVariables.swift */,
+				744A805F2B0FB43E00A92CA0 /* Main.storyboard */,
+				744A80622B0FB43E00A92CA0 /* Assets.xcassets */,
+				744A80642B0FB43E00A92CA0 /* LaunchScreen.storyboard */,
+				744A80672B0FB43E00A92CA0 /* Info.plist */,
+			);
+			path = YabbiDemoApp;
+			sourceTree = "<group>";
+		};
+		744A806F2B0FB43F00A92CA0 /* YabbiDemoAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				744A80702B0FB43F00A92CA0 /* YabbiDemoAppTests.swift */,
+			);
+			path = YabbiDemoAppTests;
+			sourceTree = "<group>";
+		};
+		744A80792B0FB43F00A92CA0 /* YabbiDemoAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				744A807A2B0FB43F00A92CA0 /* YabbiDemoAppUITests.swift */,
+				744A807C2B0FB43F00A92CA0 /* YabbiDemoAppUITestsLaunchTests.swift */,
+			);
+			path = YabbiDemoAppUITests;
+			sourceTree = "<group>";
+		};
+		C4EFE726087E1569CAC616A2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D3DF3556B12166D97C24954E /* Pods-YabbiDemoApp.debug.xcconfig */,
+				1B88A95A4383B00C4C440667 /* Pods-YabbiDemoApp.release.xcconfig */,
+				B932C1D27D29B2BE5EE97EAF /* Pods-YabbiDemoApp-YabbiDemoAppUITests.debug.xcconfig */,
+				E56D4725EAF8E39753EBBD37 /* Pods-YabbiDemoApp-YabbiDemoAppUITests.release.xcconfig */,
+				CB2A2FFC3736B3561715A75D /* Pods-YabbiDemoAppTests.debug.xcconfig */,
+				4D131A5F5F39D2EEF6CAE3CA /* Pods-YabbiDemoAppTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F21F7374A268741D87B061F6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C73C8381A552D8B5B72C941E /* Pods_YabbiDemoApp.framework */,
+				F29513F07A446E17AB268621 /* Pods_YabbiDemoApp_YabbiDemoAppUITests.framework */,
+				A88B8422B1929CD3E8217EE3 /* Pods_YabbiDemoAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		744A80552B0FB43E00A92CA0 /* YabbiDemoApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 744A80802B0FB43F00A92CA0 /* Build configuration list for PBXNativeTarget "YabbiDemoApp" */;
+			buildPhases = (
+				CD598A53A0D2D8703AB77FFD /* [CP] Check Pods Manifest.lock */,
+				744A80522B0FB43E00A92CA0 /* Sources */,
+				744A80532B0FB43E00A92CA0 /* Frameworks */,
+				744A80542B0FB43E00A92CA0 /* Resources */,
+				5B63EBF4A69ABB83EE7B1AFF /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YabbiDemoApp;
+			productName = YabbiDemoApp;
+			productReference = 744A80562B0FB43E00A92CA0 /* YabbiDemoApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		744A806B2B0FB43F00A92CA0 /* YabbiDemoAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 744A80832B0FB43F00A92CA0 /* Build configuration list for PBXNativeTarget "YabbiDemoAppTests" */;
+			buildPhases = (
+				FBEE5E58900EE1204D9A193C /* [CP] Check Pods Manifest.lock */,
+				744A80682B0FB43F00A92CA0 /* Sources */,
+				744A80692B0FB43F00A92CA0 /* Frameworks */,
+				744A806A2B0FB43F00A92CA0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				744A806E2B0FB43F00A92CA0 /* PBXTargetDependency */,
+			);
+			name = YabbiDemoAppTests;
+			productName = YabbiDemoAppTests;
+			productReference = 744A806C2B0FB43F00A92CA0 /* YabbiDemoAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		744A80752B0FB43F00A92CA0 /* YabbiDemoAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 744A80862B0FB43F00A92CA0 /* Build configuration list for PBXNativeTarget "YabbiDemoAppUITests" */;
+			buildPhases = (
+				004FFA0498E994CB06ED2E7D /* [CP] Check Pods Manifest.lock */,
+				744A80722B0FB43F00A92CA0 /* Sources */,
+				744A80732B0FB43F00A92CA0 /* Frameworks */,
+				744A80742B0FB43F00A92CA0 /* Resources */,
+				29C9466AE6B3533FAFD017FC /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				744A80782B0FB43F00A92CA0 /* PBXTargetDependency */,
+			);
+			name = YabbiDemoAppUITests;
+			productName = YabbiDemoAppUITests;
+			productReference = 744A80762B0FB43F00A92CA0 /* YabbiDemoAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		744A804E2B0FB43E00A92CA0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					744A80552B0FB43E00A92CA0 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					744A806B2B0FB43F00A92CA0 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 744A80552B0FB43E00A92CA0;
+					};
+					744A80752B0FB43F00A92CA0 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 744A80552B0FB43E00A92CA0;
+					};
+				};
+			};
+			buildConfigurationList = 744A80512B0FB43E00A92CA0 /* Build configuration list for PBXProject "YabbiDemoApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 744A804D2B0FB43E00A92CA0;
+			productRefGroup = 744A80572B0FB43E00A92CA0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				744A80552B0FB43E00A92CA0 /* YabbiDemoApp */,
+				744A806B2B0FB43F00A92CA0 /* YabbiDemoAppTests */,
+				744A80752B0FB43F00A92CA0 /* YabbiDemoAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		744A80542B0FB43E00A92CA0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				744A80662B0FB43E00A92CA0 /* LaunchScreen.storyboard in Resources */,
+				744A80632B0FB43E00A92CA0 /* Assets.xcassets in Resources */,
+				744A80612B0FB43E00A92CA0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		744A806A2B0FB43F00A92CA0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		744A80742B0FB43F00A92CA0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		004FFA0498E994CB06ED2E7D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YabbiDemoApp-YabbiDemoAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		29C9466AE6B3533FAFD017FC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YabbiDemoApp-YabbiDemoAppUITests/Pods-YabbiDemoApp-YabbiDemoAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YabbiDemoApp-YabbiDemoAppUITests/Pods-YabbiDemoApp-YabbiDemoAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YabbiDemoApp-YabbiDemoAppUITests/Pods-YabbiDemoApp-YabbiDemoAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5B63EBF4A69ABB83EE7B1AFF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YabbiDemoApp/Pods-YabbiDemoApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YabbiDemoApp/Pods-YabbiDemoApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YabbiDemoApp/Pods-YabbiDemoApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD598A53A0D2D8703AB77FFD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YabbiDemoApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FBEE5E58900EE1204D9A193C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YabbiDemoAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		744A80522B0FB43E00A92CA0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				744A80922B0FB62900A92CA0 /* ConsentManagerViewController.swift in Sources */,
+				744A80932B0FB62900A92CA0 /* Extensions.swift in Sources */,
+				744A80912B0FB62900A92CA0 /* DeviceInfoViewController.swift in Sources */,
+				744A805E2B0FB43E00A92CA0 /* ViewController.swift in Sources */,
+				744A80962B0FB62900A92CA0 /* MediationNetworks.swift in Sources */,
+				744A80952B0FB62900A92CA0 /* RewardedViewController.swift in Sources */,
+				744A805A2B0FB43E00A92CA0 /* AppDelegate.swift in Sources */,
+				744A808A2B0FB51D00A92CA0 /* EnvironmentVariables.swift in Sources */,
+				744A80942B0FB62900A92CA0 /* InterstitialViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		744A80682B0FB43F00A92CA0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				744A80712B0FB43F00A92CA0 /* YabbiDemoAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		744A80722B0FB43F00A92CA0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				744A807B2B0FB43F00A92CA0 /* YabbiDemoAppUITests.swift in Sources */,
+				744A807D2B0FB43F00A92CA0 /* YabbiDemoAppUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		744A806E2B0FB43F00A92CA0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 744A80552B0FB43E00A92CA0 /* YabbiDemoApp */;
+			targetProxy = 744A806D2B0FB43F00A92CA0 /* PBXContainerItemProxy */;
+		};
+		744A80782B0FB43F00A92CA0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 744A80552B0FB43E00A92CA0 /* YabbiDemoApp */;
+			targetProxy = 744A80772B0FB43F00A92CA0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		744A805F2B0FB43E00A92CA0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				744A80602B0FB43E00A92CA0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		744A80642B0FB43E00A92CA0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				744A80652B0FB43E00A92CA0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		744A807E2B0FB43F00A92CA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		744A807F2B0FB43F00A92CA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		744A80812B0FB43F00A92CA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3DF3556B12166D97C24954E /* Pods-YabbiDemoApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = YabbiDemoApp/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "App needs your location for analytics and advertising purposes.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "App needs your location for analytics and advertising purposes.";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "App needs your advertising identifier to provide personalised advertising experience tailored to you.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.yabbi.ads.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		744A80822B0FB43F00A92CA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B88A95A4383B00C4C440667 /* Pods-YabbiDemoApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = YabbiDemoApp/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "App needs your location for analytics and advertising purposes.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "App needs your location for analytics and advertising purposes.";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "App needs your advertising identifier to provide personalised advertising experience tailored to you.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.yabbi.ads.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		744A80842B0FB43F00A92CA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB2A2FFC3736B3561715A75D /* Pods-YabbiDemoAppTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.yabbi.ads.app.YabbiDemoAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YabbiDemoApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/YabbiDemoApp";
+			};
+			name = Debug;
+		};
+		744A80852B0FB43F00A92CA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D131A5F5F39D2EEF6CAE3CA /* Pods-YabbiDemoAppTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.yabbi.ads.app.YabbiDemoAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YabbiDemoApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/YabbiDemoApp";
+			};
+			name = Release;
+		};
+		744A80872B0FB43F00A92CA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B932C1D27D29B2BE5EE97EAF /* Pods-YabbiDemoApp-YabbiDemoAppUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.yabbi.ads.app.YabbiDemoAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = YabbiDemoApp;
+			};
+			name = Debug;
+		};
+		744A80882B0FB43F00A92CA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E56D4725EAF8E39753EBBD37 /* Pods-YabbiDemoApp-YabbiDemoAppUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.yabbi.ads.app.YabbiDemoAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = YabbiDemoApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		744A80512B0FB43E00A92CA0 /* Build configuration list for PBXProject "YabbiDemoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				744A807E2B0FB43F00A92CA0 /* Debug */,
+				744A807F2B0FB43F00A92CA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		744A80802B0FB43F00A92CA0 /* Build configuration list for PBXNativeTarget "YabbiDemoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				744A80812B0FB43F00A92CA0 /* Debug */,
+				744A80822B0FB43F00A92CA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		744A80832B0FB43F00A92CA0 /* Build configuration list for PBXNativeTarget "YabbiDemoAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				744A80842B0FB43F00A92CA0 /* Debug */,
+				744A80852B0FB43F00A92CA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		744A80862B0FB43F00A92CA0 /* Build configuration list for PBXNativeTarget "YabbiDemoAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				744A80872B0FB43F00A92CA0 /* Debug */,
+				744A80882B0FB43F00A92CA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 744A804E2B0FB43E00A92CA0 /* Project object */;
+}
