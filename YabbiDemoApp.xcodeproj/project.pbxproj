@@ -271,7 +271,7 @@
 			};
 			buildConfigurationList = 744A80512B0FB43E00A92CA0 /* Build configuration list for PBXProject "YabbiDemoApp" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = ru;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
