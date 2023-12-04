@@ -32,7 +32,7 @@ class ConsentManagerViewController:UIViewController {
             let _ = builder
                 .appendPolicyURL("https://yabbi.me/privacy-policies")
                 .appendBundle("me.yabbi.ads.app")
-                .appendName("Test name")
+                .appendName("Demo App")
         }
     }
     
