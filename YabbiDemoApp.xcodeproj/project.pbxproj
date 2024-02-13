@@ -197,6 +197,7 @@
 				744A80532B0FB43E00A92CA0 /* Frameworks */,
 				744A80542B0FB43E00A92CA0 /* Resources */,
 				5B63EBF4A69ABB83EE7B1AFF /* [CP] Embed Pods Frameworks */,
+				4D1BAF81346C5C95E2E37FA4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -235,6 +236,7 @@
 				744A80732B0FB43F00A92CA0 /* Frameworks */,
 				744A80742B0FB43F00A92CA0 /* Resources */,
 				29C9466AE6B3533FAFD017FC /* [CP] Embed Pods Frameworks */,
+				E333372503053D22E9BC451B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -356,6 +358,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YabbiDemoApp-YabbiDemoAppUITests/Pods-YabbiDemoApp-YabbiDemoAppUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		4D1BAF81346C5C95E2E37FA4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YabbiDemoApp/Pods-YabbiDemoApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YabbiDemoApp/Pods-YabbiDemoApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YabbiDemoApp/Pods-YabbiDemoApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5B63EBF4A69ABB83EE7B1AFF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -393,6 +412,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E333372503053D22E9BC451B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YabbiDemoApp-YabbiDemoAppUITests/Pods-YabbiDemoApp-YabbiDemoAppUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YabbiDemoApp-YabbiDemoAppUITests/Pods-YabbiDemoApp-YabbiDemoAppUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YabbiDemoApp-YabbiDemoAppUITests/Pods-YabbiDemoApp-YabbiDemoAppUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FBEE5E58900EE1204D9A193C /* [CP] Check Pods Manifest.lock */ = {

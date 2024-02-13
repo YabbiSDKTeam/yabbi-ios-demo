@@ -17,7 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Yabbi.setCustomParams("appStoreAppID", EnvironmentVariables.appStoreAppID)
         Yabbi.enableDebug(true)
-        Yabbi.initialize(publisherID: EnvironmentVariables.publisherID)
+        Yabbi.initialize(publisherID: EnvironmentVariables.publisherID) { error in
+            
+        }
         
         return true
     }
