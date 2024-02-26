@@ -66,7 +66,7 @@ PODS:
     - YandexMobileAdsInstream (~> 0.20.0)
   - YabbiConsentManager (1.0.0):
     - SspnetConsentManager
-  - YabbiSDK (1.1.0):
+  - YabbiSDK (1.2.0):
     - SspnetCore
   - YandexMobileAds (6.0.0):
     - DivKit (~> 24.2)
@@ -91,7 +91,7 @@ DEPENDENCIES:
   - SspnetMintegralAdapter (= 1.1.0)
   - SspnetYandexAdapter (= 1.1.0)
   - YabbiConsentManager (= 1.0.0)
-  - YabbiSDK (= 1.1.0)
+  - YabbiSDK (= 1.2.0)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -139,11 +139,11 @@ SPEC CHECKSUMS:
   SspnetMintegralAdapter: c55b6dec16a5b8bc98b4c43d206df4c426f0b272
   SspnetYandexAdapter: 692e0dde57f8b3c8fb51cbdbf8b4b99426dc8a4c
   YabbiConsentManager: 7f10418513f45a21f26d54015e7b5869c842be85
-  YabbiSDK: 5859b9ae4716e4e9e3a925d1533b48d23a130d19
+  YabbiSDK: 960aeccb5234eaa82476ecf768c00262b3d72fa7
   YandexMobileAds: e1baa34843127146fdd60483236db86b84ffb70a
   YandexMobileAdsInstream: 956a63bfb06b0d9ceeb1b72d67b4a4e0b5d68b1c
   YandexMobileMetrica: f5368ee93f286c793d73b58da00929babfc897c1
 
-PODFILE CHECKSUM: 51ee91564366ed4d2fc43bbc3497c316e807fed5
+PODFILE CHECKSUM: fdfdd84f76d7f4d4e35d71840295d3843e2c7554
 
 COCOAPODS: 1.13.0
