@@ -9,13 +9,13 @@ target 'YabbiDemoApp' do
 
   # Pods for YabbiDemoApp
   
-  pod 'YabbiSDK', '1.4.0'
+  pod 'YabbiSDK', '1.5.0'
   pod 'YabbiConsentManager', '1.0.3'
   
   pod 'SspnetYandexAdapter', '1.2.1'
   pod 'SspnetMintegralAdapter', '1.2.1'
   pod 'SspnetIronSourceAdapter', '1.2.1'
-  pod 'SspnetApplovinAdapter', '1.1.1'
+  pod 'SspnetApplovinAdapter', '1.2.0'
 
   target 'YabbiDemoAppTests' do
     inherit! :search_paths
