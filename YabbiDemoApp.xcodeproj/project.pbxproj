@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		437E78080460454A4DA2F29A /* Pods_YabbiDemoAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8D0DB72517C0C468F67D0D4 /* Pods_YabbiDemoAppTests.framework */; };
+		004C7F444AF588DE350B8168 /* Pods_YabbiDemoApp_YabbiDemoAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48383E9FACA3C05B3FC10A35 /* Pods_YabbiDemoApp_YabbiDemoAppUITests.framework */; };
+		3580355A7647BD0486D2B302 /* Pods_YabbiDemoAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D9399CCB7C44C9FA32C4F99 /* Pods_YabbiDemoAppTests.framework */; };
 		744A805A2B0FB43E00A92CA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744A80592B0FB43E00A92CA0 /* AppDelegate.swift */; };
 		744A805E2B0FB43E00A92CA0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744A805D2B0FB43E00A92CA0 /* ViewController.swift */; };
 		744A80612B0FB43E00A92CA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 744A805F2B0FB43E00A92CA0 /* Main.storyboard */; };
@@ -23,8 +24,8 @@
 		744A80942B0FB62900A92CA0 /* InterstitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744A808E2B0FB62900A92CA0 /* InterstitialViewController.swift */; };
 		744A80952B0FB62900A92CA0 /* RewardedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744A808F2B0FB62900A92CA0 /* RewardedViewController.swift */; };
 		744A80962B0FB62900A92CA0 /* MediationNetworks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744A80902B0FB62900A92CA0 /* MediationNetworks.swift */; };
-		8D389DFB9271B02A2E12CC05 /* Pods_YabbiDemoApp_YabbiDemoAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B9AC793AB1E6B087A160373 /* Pods_YabbiDemoApp_YabbiDemoAppUITests.framework */; };
-		FC8FAC04C22D28D387FC029C /* Pods_YabbiDemoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7634E7FFA6B50B4B993805CE /* Pods_YabbiDemoApp.framework */; };
+		74727FD32D8C8D53004AA27E /* BannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74727FD22D8C8D52004AA27E /* BannerViewController.swift */; };
+		889CE4C1B0B12E4DAE97CDA1 /* Pods_YabbiDemoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF729231C3F2C1DE8394DB9 /* Pods_YabbiDemoApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +46,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6B9AC793AB1E6B087A160373 /* Pods_YabbiDemoApp_YabbiDemoAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YabbiDemoApp_YabbiDemoAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D9399CCB7C44C9FA32C4F99 /* Pods_YabbiDemoAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YabbiDemoAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C839BA1F69A5E74A6122643 /* Pods-YabbiDemoApp-YabbiDemoAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YabbiDemoApp-YabbiDemoAppUITests.release.xcconfig"; path = "Target Support Files/Pods-YabbiDemoApp-YabbiDemoAppUITests/Pods-YabbiDemoApp-YabbiDemoAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		407F12983B94009D48DF766F /* Pods-YabbiDemoAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YabbiDemoAppTests.release.xcconfig"; path = "Target Support Files/Pods-YabbiDemoAppTests/Pods-YabbiDemoAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		48383E9FACA3C05B3FC10A35 /* Pods_YabbiDemoApp_YabbiDemoAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YabbiDemoApp_YabbiDemoAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EF729231C3F2C1DE8394DB9 /* Pods_YabbiDemoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YabbiDemoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		744A80562B0FB43E00A92CA0 /* YabbiDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YabbiDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		744A80592B0FB43E00A92CA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		744A805D2B0FB43E00A92CA0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,14 +70,11 @@
 		744A808E2B0FB62900A92CA0 /* InterstitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterstitialViewController.swift; sourceTree = "<group>"; };
 		744A808F2B0FB62900A92CA0 /* RewardedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardedViewController.swift; sourceTree = "<group>"; };
 		744A80902B0FB62900A92CA0 /* MediationNetworks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediationNetworks.swift; sourceTree = "<group>"; };
-		74C40C9D6E23168DA2C678B1 /* Pods-YabbiDemoAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YabbiDemoAppTests.release.xcconfig"; path = "Target Support Files/Pods-YabbiDemoAppTests/Pods-YabbiDemoAppTests.release.xcconfig"; sourceTree = "<group>"; };
-		7634E7FFA6B50B4B993805CE /* Pods_YabbiDemoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YabbiDemoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B537D4320B571EBC7D6F3FF5 /* Pods-YabbiDemoApp-YabbiDemoAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YabbiDemoApp-YabbiDemoAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-YabbiDemoApp-YabbiDemoAppUITests/Pods-YabbiDemoApp-YabbiDemoAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		B7D3FC48CF71DCBB97831DF9 /* Pods-YabbiDemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YabbiDemoApp.release.xcconfig"; path = "Target Support Files/Pods-YabbiDemoApp/Pods-YabbiDemoApp.release.xcconfig"; sourceTree = "<group>"; };
-		BE61E26E2829897C66E8361B /* Pods-YabbiDemoAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YabbiDemoAppTests.debug.xcconfig"; path = "Target Support Files/Pods-YabbiDemoAppTests/Pods-YabbiDemoAppTests.debug.xcconfig"; sourceTree = "<group>"; };
-		BEB1DC61A37827E94062DF9A /* Pods-YabbiDemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YabbiDemoApp.debug.xcconfig"; path = "Target Support Files/Pods-YabbiDemoApp/Pods-YabbiDemoApp.debug.xcconfig"; sourceTree = "<group>"; };
-		E8D0DB72517C0C468F67D0D4 /* Pods_YabbiDemoAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YabbiDemoAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE4D1CF0F043EE52DFB5DEBD /* Pods-YabbiDemoApp-YabbiDemoAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YabbiDemoApp-YabbiDemoAppUITests.release.xcconfig"; path = "Target Support Files/Pods-YabbiDemoApp-YabbiDemoAppUITests/Pods-YabbiDemoApp-YabbiDemoAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		74727FD22D8C8D52004AA27E /* BannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerViewController.swift; sourceTree = "<group>"; };
+		9EE624FF73AE09B618002D68 /* Pods-YabbiDemoAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YabbiDemoAppTests.debug.xcconfig"; path = "Target Support Files/Pods-YabbiDemoAppTests/Pods-YabbiDemoAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AD40B31D068A984E762FFF71 /* Pods-YabbiDemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YabbiDemoApp.debug.xcconfig"; path = "Target Support Files/Pods-YabbiDemoApp/Pods-YabbiDemoApp.debug.xcconfig"; sourceTree = "<group>"; };
+		CC70F93BA1B2E1CA1017A28C /* Pods-YabbiDemoApp-YabbiDemoAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YabbiDemoApp-YabbiDemoAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-YabbiDemoApp-YabbiDemoAppUITests/Pods-YabbiDemoApp-YabbiDemoAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F7452C7C75E2382E22DD7FB1 /* Pods-YabbiDemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YabbiDemoApp.release.xcconfig"; path = "Target Support Files/Pods-YabbiDemoApp/Pods-YabbiDemoApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC8FAC04C22D28D387FC029C /* Pods_YabbiDemoApp.framework in Frameworks */,
+				889CE4C1B0B12E4DAE97CDA1 /* Pods_YabbiDemoApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				437E78080460454A4DA2F29A /* Pods_YabbiDemoAppTests.framework in Frameworks */,
+				3580355A7647BD0486D2B302 /* Pods_YabbiDemoAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,19 +98,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D389DFB9271B02A2E12CC05 /* Pods_YabbiDemoApp_YabbiDemoAppUITests.framework in Frameworks */,
+				004C7F444AF588DE350B8168 /* Pods_YabbiDemoApp_YabbiDemoAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6889701900E2F30E7D802E38 /* Frameworks */ = {
+		4F1B2FCB535F0A498BA9DC77 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7634E7FFA6B50B4B993805CE /* Pods_YabbiDemoApp.framework */,
-				6B9AC793AB1E6B087A160373 /* Pods_YabbiDemoApp_YabbiDemoAppUITests.framework */,
-				E8D0DB72517C0C468F67D0D4 /* Pods_YabbiDemoAppTests.framework */,
+				4EF729231C3F2C1DE8394DB9 /* Pods_YabbiDemoApp.framework */,
+				48383E9FACA3C05B3FC10A35 /* Pods_YabbiDemoApp_YabbiDemoAppUITests.framework */,
+				1D9399CCB7C44C9FA32C4F99 /* Pods_YabbiDemoAppTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -121,7 +123,7 @@
 				744A80792B0FB43F00A92CA0 /* YabbiDemoAppUITests */,
 				744A80572B0FB43E00A92CA0 /* Products */,
 				C4EFE726087E1569CAC616A2 /* Pods */,
-				6889701900E2F30E7D802E38 /* Frameworks */,
+				4F1B2FCB535F0A498BA9DC77 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,6 +140,7 @@
 		744A80582B0FB43E00A92CA0 /* YabbiDemoApp */ = {
 			isa = PBXGroup;
 			children = (
+				74727FD22D8C8D52004AA27E /* BannerViewController.swift */,
 				744A808C2B0FB62900A92CA0 /* ConsentManagerViewController.swift */,
 				744A808B2B0FB62900A92CA0 /* DeviceInfoViewController.swift */,
 				744A808D2B0FB62900A92CA0 /* Extensions.swift */,
@@ -175,12 +178,12 @@
 		C4EFE726087E1569CAC616A2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BEB1DC61A37827E94062DF9A /* Pods-YabbiDemoApp.debug.xcconfig */,
-				B7D3FC48CF71DCBB97831DF9 /* Pods-YabbiDemoApp.release.xcconfig */,
-				B537D4320B571EBC7D6F3FF5 /* Pods-YabbiDemoApp-YabbiDemoAppUITests.debug.xcconfig */,
-				FE4D1CF0F043EE52DFB5DEBD /* Pods-YabbiDemoApp-YabbiDemoAppUITests.release.xcconfig */,
-				BE61E26E2829897C66E8361B /* Pods-YabbiDemoAppTests.debug.xcconfig */,
-				74C40C9D6E23168DA2C678B1 /* Pods-YabbiDemoAppTests.release.xcconfig */,
+				AD40B31D068A984E762FFF71 /* Pods-YabbiDemoApp.debug.xcconfig */,
+				F7452C7C75E2382E22DD7FB1 /* Pods-YabbiDemoApp.release.xcconfig */,
+				CC70F93BA1B2E1CA1017A28C /* Pods-YabbiDemoApp-YabbiDemoAppUITests.debug.xcconfig */,
+				3C839BA1F69A5E74A6122643 /* Pods-YabbiDemoApp-YabbiDemoAppUITests.release.xcconfig */,
+				9EE624FF73AE09B618002D68 /* Pods-YabbiDemoAppTests.debug.xcconfig */,
+				407F12983B94009D48DF766F /* Pods-YabbiDemoAppTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -192,12 +195,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 744A80802B0FB43F00A92CA0 /* Build configuration list for PBXNativeTarget "YabbiDemoApp" */;
 			buildPhases = (
-				68B72759FC72CA121C27E43B /* [CP] Check Pods Manifest.lock */,
+				80D6A30E0AFBAB4E637BF333 /* [CP] Check Pods Manifest.lock */,
 				744A80522B0FB43E00A92CA0 /* Sources */,
 				744A80532B0FB43E00A92CA0 /* Frameworks */,
 				744A80542B0FB43E00A92CA0 /* Resources */,
-				B4BAE0C1A7E144D5822CFA02 /* [CP] Embed Pods Frameworks */,
-				BA69B09ECC7E29567ED0B1F9 /* [CP] Copy Pods Resources */,
+				4CB60F1668C21F90879B20B2 /* [CP] Embed Pods Frameworks */,
+				10A68C30011511F3EEC38E4D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -212,7 +215,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 744A80832B0FB43F00A92CA0 /* Build configuration list for PBXNativeTarget "YabbiDemoAppTests" */;
 			buildPhases = (
-				7066A324C4FC91F74F72AAEB /* [CP] Check Pods Manifest.lock */,
+				AA9A33A97FC7EB4223137F86 /* [CP] Check Pods Manifest.lock */,
 				744A80682B0FB43F00A92CA0 /* Sources */,
 				744A80692B0FB43F00A92CA0 /* Frameworks */,
 				744A806A2B0FB43F00A92CA0 /* Resources */,
@@ -231,12 +234,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 744A80862B0FB43F00A92CA0 /* Build configuration list for PBXNativeTarget "YabbiDemoAppUITests" */;
 			buildPhases = (
-				B9D62D76E2DED60425C6E569 /* [CP] Check Pods Manifest.lock */,
+				AB9E4246A8B34C3987E583BA /* [CP] Check Pods Manifest.lock */,
 				744A80722B0FB43F00A92CA0 /* Sources */,
 				744A80732B0FB43F00A92CA0 /* Frameworks */,
 				744A80742B0FB43F00A92CA0 /* Resources */,
-				3942862EF72151B64B0F43CE /* [CP] Embed Pods Frameworks */,
-				19C93DD80FA991D3B5E401E7 /* [CP] Copy Pods Resources */,
+				E3CA06CDD76AE96B7AE0442F /* [CP] Embed Pods Frameworks */,
+				4366EFA23999CBCA762801F9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -320,7 +323,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		19C93DD80FA991D3B5E401E7 /* [CP] Copy Pods Resources */ = {
+		10A68C30011511F3EEC38E4D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YabbiDemoApp/Pods-YabbiDemoApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YabbiDemoApp/Pods-YabbiDemoApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YabbiDemoApp/Pods-YabbiDemoApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4366EFA23999CBCA762801F9 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -337,24 +357,24 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YabbiDemoApp-YabbiDemoAppUITests/Pods-YabbiDemoApp-YabbiDemoAppUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3942862EF72151B64B0F43CE /* [CP] Embed Pods Frameworks */ = {
+		4CB60F1668C21F90879B20B2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-YabbiDemoApp-YabbiDemoAppUITests/Pods-YabbiDemoApp-YabbiDemoAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-YabbiDemoApp/Pods-YabbiDemoApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-YabbiDemoApp-YabbiDemoAppUITests/Pods-YabbiDemoApp-YabbiDemoAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-YabbiDemoApp/Pods-YabbiDemoApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YabbiDemoApp-YabbiDemoAppUITests/Pods-YabbiDemoApp-YabbiDemoAppUITests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YabbiDemoApp/Pods-YabbiDemoApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		68B72759FC72CA121C27E43B /* [CP] Check Pods Manifest.lock */ = {
+		80D6A30E0AFBAB4E637BF333 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -376,7 +396,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7066A324C4FC91F74F72AAEB /* [CP] Check Pods Manifest.lock */ = {
+		AA9A33A97FC7EB4223137F86 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -398,24 +418,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B4BAE0C1A7E144D5822CFA02 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-YabbiDemoApp/Pods-YabbiDemoApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-YabbiDemoApp/Pods-YabbiDemoApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YabbiDemoApp/Pods-YabbiDemoApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B9D62D76E2DED60425C6E569 /* [CP] Check Pods Manifest.lock */ = {
+		AB9E4246A8B34C3987E583BA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -437,21 +440,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BA69B09ECC7E29567ED0B1F9 /* [CP] Copy Pods Resources */ = {
+		E3CA06CDD76AE96B7AE0442F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-YabbiDemoApp/Pods-YabbiDemoApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-YabbiDemoApp-YabbiDemoAppUITests/Pods-YabbiDemoApp-YabbiDemoAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-YabbiDemoApp/Pods-YabbiDemoApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-YabbiDemoApp-YabbiDemoAppUITests/Pods-YabbiDemoApp-YabbiDemoAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YabbiDemoApp/Pods-YabbiDemoApp-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YabbiDemoApp-YabbiDemoAppUITests/Pods-YabbiDemoApp-YabbiDemoAppUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -461,6 +464,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74727FD32D8C8D53004AA27E /* BannerViewController.swift in Sources */,
 				744A80922B0FB62900A92CA0 /* ConsentManagerViewController.swift in Sources */,
 				744A80932B0FB62900A92CA0 /* Extensions.swift in Sources */,
 				744A80912B0FB62900A92CA0 /* DeviceInfoViewController.swift in Sources */,
@@ -646,7 +650,7 @@
 		};
 		744A80812B0FB43F00A92CA0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BEB1DC61A37827E94062DF9A /* Pods-YabbiDemoApp.debug.xcconfig */;
+			baseConfigurationReference = AD40B31D068A984E762FFF71 /* Pods-YabbiDemoApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -681,7 +685,7 @@
 		};
 		744A80822B0FB43F00A92CA0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B7D3FC48CF71DCBB97831DF9 /* Pods-YabbiDemoApp.release.xcconfig */;
+			baseConfigurationReference = F7452C7C75E2382E22DD7FB1 /* Pods-YabbiDemoApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -716,7 +720,7 @@
 		};
 		744A80842B0FB43F00A92CA0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BE61E26E2829897C66E8361B /* Pods-YabbiDemoAppTests.debug.xcconfig */;
+			baseConfigurationReference = 9EE624FF73AE09B618002D68 /* Pods-YabbiDemoAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -736,7 +740,7 @@
 		};
 		744A80852B0FB43F00A92CA0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 74C40C9D6E23168DA2C678B1 /* Pods-YabbiDemoAppTests.release.xcconfig */;
+			baseConfigurationReference = 407F12983B94009D48DF766F /* Pods-YabbiDemoAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -756,7 +760,7 @@
 		};
 		744A80872B0FB43F00A92CA0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B537D4320B571EBC7D6F3FF5 /* Pods-YabbiDemoApp-YabbiDemoAppUITests.debug.xcconfig */;
+			baseConfigurationReference = CC70F93BA1B2E1CA1017A28C /* Pods-YabbiDemoApp-YabbiDemoAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -774,7 +778,7 @@
 		};
 		744A80882B0FB43F00A92CA0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FE4D1CF0F043EE52DFB5DEBD /* Pods-YabbiDemoApp-YabbiDemoAppUITests.release.xcconfig */;
+			baseConfigurationReference = 3C839BA1F69A5E74A6122643 /* Pods-YabbiDemoApp-YabbiDemoAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
