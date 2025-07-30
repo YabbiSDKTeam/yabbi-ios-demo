@@ -15,29 +15,29 @@ PODS:
   - DivKit_Serialization (28.13.0):
     - VGSLCommonCore (~> 2.4)
   - IronSourceSDK (7.8.0.0)
-  - MintegralAdSDK/BidNativeAd (7.7.8):
+  - MintegralAdSDK/BidNativeAd (7.7.9):
     - MintegralAdSDK/NativeAd
-  - MintegralAdSDK/BidNewInterstitialAd (7.7.8):
+  - MintegralAdSDK/BidNewInterstitialAd (7.7.9):
     - MintegralAdSDK/BidNativeAd
     - MintegralAdSDK/NewInterstitialAd
-  - MintegralAdSDK/BidRewardVideoAd (7.7.8):
+  - MintegralAdSDK/BidRewardVideoAd (7.7.9):
     - MintegralAdSDK/BidNativeAd
     - MintegralAdSDK/RewardVideoAd
-  - MintegralAdSDK/InterstitialVideoAd (7.7.8):
+  - MintegralAdSDK/InterstitialVideoAd (7.7.9):
     - MintegralAdSDK/NativeAd
-  - MintegralAdSDK/NativeAd (7.7.8)
-  - MintegralAdSDK/NewInterstitialAd (7.7.8):
+  - MintegralAdSDK/NativeAd (7.7.9)
+  - MintegralAdSDK/NewInterstitialAd (7.7.9):
     - MintegralAdSDK/InterstitialVideoAd
     - MintegralAdSDK/NativeAd
-  - MintegralAdSDK/RewardVideoAd (7.7.8):
+  - MintegralAdSDK/RewardVideoAd (7.7.9):
     - MintegralAdSDK/NativeAd
   - SspnetApplovinAdapter (1.4.0):
     - AppLovinSDK (~> 13.0.0)
     - SspnetCore (~> 1.7.0)
-  - SspnetConsentManager (1.0.3)
-  - SspnetCore (1.7.2):
-    - SspnetDsp (~> 1.4.2)
-  - SspnetDsp (1.4.2)
+  - SspnetConsentManager (1.0.4)
+  - SspnetCore (1.7.3):
+    - SspnetDsp (~> 1.4.3)
+  - SspnetDsp (1.4.3)
   - SspnetIronSourceAdapter (1.4.0):
     - IronSourceSDK (~> 7.8.0.0)
     - SspnetCore (~> 1.7.0)
@@ -64,10 +64,10 @@ PODS:
     - VGSLBase (= 2.4.1)
   - VGSLNetworking (2.4.1):
     - VGSLBase (= 2.4.1)
-  - YabbiConsentManager (1.0.3):
-    - SspnetConsentManager
-  - YabbiSDK (1.7.2):
-    - SspnetCore (~> 1.7.2)
+  - YabbiConsentManager (1.0.4):
+    - SspnetConsentManager (~> 1.0.4)
+  - YabbiSDK (1.7.3):
+    - SspnetCore (~> 1.7.3)
   - YandexMobileAds (6.4.1):
     - DivKit (= 28.13.0)
     - YandexMobileMetrica (< 5.0.0, >= 4.0.0)
@@ -87,8 +87,8 @@ DEPENDENCIES:
   - SspnetIronSourceAdapter (= 1.4.0)
   - SspnetMintegralAdapter (= 1.4.0)
   - SspnetYandexAdapter (= 1.4.0)
-  - YabbiConsentManager (= 1.0.3)
-  - YabbiSDK (= 1.7.2)
+  - YabbiConsentManager (= 1.0.4)
+  - YabbiSDK (= 1.7.3)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -126,11 +126,11 @@ SPEC CHECKSUMS:
   DivKit_LayoutKitInterface: 90449756ba956a7fbf3b168c01f7a0b7fc6a9de0
   DivKit_Serialization: 1b536e30c49163548bb62120320097c8ab41936d
   IronSourceSDK: ef878d01ce69a68633c7a27c89cabe0e41fcc49a
-  MintegralAdSDK: 07e018290689b906499d8285654bba42681cafcf
+  MintegralAdSDK: 054814f99bb7e967b8974fe635d9005b225cbe42
   SspnetApplovinAdapter: 569285a1ffea8981e7dd70cce4034ff03779af44
-  SspnetConsentManager: 7ba0b9835231080d1559f796443c43ed1ac9fb2c
-  SspnetCore: 0b0143a9d9525cfd67eba3f4a52318ed79ae1cae
-  SspnetDsp: 4d7f67cfb72e762f7037f242f63ac9a15473d1b1
+  SspnetConsentManager: 0f473ad952e81f77bcc9b731cf039cdfff3bf458
+  SspnetCore: 442fc7eda5034a325e8c5edb2ed14a08672c8004
+  SspnetDsp: 83ecffd4cbf9b746b2afc1bf7ae770cb42e528a1
   SspnetIronSourceAdapter: dedd3f8f0696e769ed0e1b5c4d068dfe1cad3f48
   SspnetMintegralAdapter: ee40cffa2cdc785dbad0b82d6717473389cfc793
   SspnetYandexAdapter: 60121fe15999829715962fc691b38b731b0cd9d9
@@ -141,12 +141,12 @@ SPEC CHECKSUMS:
   VGSLBaseUI: 62f147155e7b7049a32a30ac87b5bd8b83e636c5
   VGSLCommonCore: dd33088af6633d1c09f0c9bb8027920b99e2e0c8
   VGSLNetworking: e12d616b447522bf524c689d28f55cfbb20473cd
-  YabbiConsentManager: 4943adc385f894ad0ce595aa080f958288705ed1
-  YabbiSDK: 0946c533fa904dc62ee5d8edd588ac8d4438945b
+  YabbiConsentManager: 1e4d62c6beed04958f585579ea49ea141619ecda
+  YabbiSDK: fe51e15fea46a21252533abcc48b96bbad70836c
   YandexMobileAds: ed587c669f2deb078f39a070ee2466cc40eca5a9
   YandexMobileAdsInstream: 2a5cf367ba82fc1933650596b207b8d32ddf019f
   YandexMobileMetrica: f5368ee93f286c793d73b58da00929babfc897c1
 
-PODFILE CHECKSUM: 2bd68cdac57703adeb8f0b9d132923ff6b7af5b7
+PODFILE CHECKSUM: f33bda8cff2b5b2badbe223aa0b3419e86c9b30c
 
 COCOAPODS: 1.16.2
