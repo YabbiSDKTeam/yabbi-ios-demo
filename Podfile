@@ -9,8 +9,8 @@ target 'YabbiDemoApp' do
 
   # Pods for YabbiDemoApp
   
-  pod 'YabbiSDK', '1.7.3'
-  pod 'YabbiConsentManager', '1.0.4'
+  pod 'YabbiSDK', '1.7.4'
+  pod 'YabbiConsentManager', '1.0.5'
   
   pod 'SspnetYandexAdapter', '1.4.0'
   pod 'SspnetMintegralAdapter', '1.4.0'

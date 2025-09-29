@@ -34,10 +34,10 @@ PODS:
   - SspnetApplovinAdapter (1.4.0):
     - AppLovinSDK (~> 13.0.0)
     - SspnetCore (~> 1.7.0)
-  - SspnetConsentManager (1.0.4)
-  - SspnetCore (1.7.3):
-    - SspnetDsp (~> 1.4.3)
-  - SspnetDsp (1.4.3)
+  - SspnetConsentManager (1.0.6)
+  - SspnetCore (1.7.4):
+    - SspnetDsp (~> 1.4.4)
+  - SspnetDsp (1.4.4)
   - SspnetIronSourceAdapter (1.4.0):
     - IronSourceSDK (~> 7.8.0.0)
     - SspnetCore (~> 1.7.0)
@@ -64,10 +64,10 @@ PODS:
     - VGSLBase (= 2.4.1)
   - VGSLNetworking (2.4.1):
     - VGSLBase (= 2.4.1)
-  - YabbiConsentManager (1.0.4):
-    - SspnetConsentManager (~> 1.0.4)
-  - YabbiSDK (1.7.3):
-    - SspnetCore (~> 1.7.3)
+  - YabbiConsentManager (1.0.5):
+    - SspnetConsentManager (~> 1.0.5)
+  - YabbiSDK (1.7.4):
+    - SspnetCore (~> 1.7.4)
   - YandexMobileAds (6.4.1):
     - DivKit (= 28.13.0)
     - YandexMobileMetrica (< 5.0.0, >= 4.0.0)
@@ -87,8 +87,8 @@ DEPENDENCIES:
   - SspnetIronSourceAdapter (= 1.4.0)
   - SspnetMintegralAdapter (= 1.4.0)
   - SspnetYandexAdapter (= 1.4.0)
-  - YabbiConsentManager (= 1.0.4)
-  - YabbiSDK (= 1.7.3)
+  - YabbiConsentManager (= 1.0.5)
+  - YabbiSDK (= 1.7.4)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -128,9 +128,9 @@ SPEC CHECKSUMS:
   IronSourceSDK: ef878d01ce69a68633c7a27c89cabe0e41fcc49a
   MintegralAdSDK: 054814f99bb7e967b8974fe635d9005b225cbe42
   SspnetApplovinAdapter: 569285a1ffea8981e7dd70cce4034ff03779af44
-  SspnetConsentManager: 0f473ad952e81f77bcc9b731cf039cdfff3bf458
-  SspnetCore: 442fc7eda5034a325e8c5edb2ed14a08672c8004
-  SspnetDsp: 83ecffd4cbf9b746b2afc1bf7ae770cb42e528a1
+  SspnetConsentManager: a0ec9cbf2233a7cf2843cdd56c82f65c8f3426d3
+  SspnetCore: f28c84e745a43b6db6f0e99ea13b3761c4fb2bef
+  SspnetDsp: 285107770c19b2a065c722552a412945386b9acc
   SspnetIronSourceAdapter: dedd3f8f0696e769ed0e1b5c4d068dfe1cad3f48
   SspnetMintegralAdapter: ee40cffa2cdc785dbad0b82d6717473389cfc793
   SspnetYandexAdapter: 60121fe15999829715962fc691b38b731b0cd9d9
@@ -141,12 +141,12 @@ SPEC CHECKSUMS:
   VGSLBaseUI: 62f147155e7b7049a32a30ac87b5bd8b83e636c5
   VGSLCommonCore: dd33088af6633d1c09f0c9bb8027920b99e2e0c8
   VGSLNetworking: e12d616b447522bf524c689d28f55cfbb20473cd
-  YabbiConsentManager: 1e4d62c6beed04958f585579ea49ea141619ecda
-  YabbiSDK: fe51e15fea46a21252533abcc48b96bbad70836c
+  YabbiConsentManager: 28abdbddc0947449f8b3511692f1df04ba37bce6
+  YabbiSDK: c18bc22bcc5583c3e1708e9e7bb5ac7ffc57acdf
   YandexMobileAds: ed587c669f2deb078f39a070ee2466cc40eca5a9
   YandexMobileAdsInstream: 2a5cf367ba82fc1933650596b207b8d32ddf019f
   YandexMobileMetrica: f5368ee93f286c793d73b58da00929babfc897c1
 
-PODFILE CHECKSUM: f33bda8cff2b5b2badbe223aa0b3419e86c9b30c
+PODFILE CHECKSUM: 452490074d29ce03faa96cd5042a981e5f63f4e2
 
 COCOAPODS: 1.16.2
